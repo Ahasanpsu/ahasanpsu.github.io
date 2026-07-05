@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications | Md. Ahasan Ahamed</title>
+<meta name="description" content="Peer-reviewed publications, review articles, and conference presentations by Md. Ahasan Ahamed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===========================================================
+   Md. Ahasan Ahamed — Academic Website — shared stylesheet
+   =========================================================== */
+:root{
+  --navy:#12233b; --accent:#0b6e8f; --accent-2:#12a1c9;
+  --ink:#1f2933; --muted:#5b6b7b; --line:#e3e8ee;
+  --bg:#ffffff; --bg-soft:#f6f8fb; --chip:#eaf4f8;
+  --maxw:980px; --radius:10px; --shadow:0 2px 14px rgba(18,35,59,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* Navbar */
+.navbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 22px;display:flex;
+  align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:700;color:var(--navy);font-size:1.05rem;letter-spacing:.2px}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;flex-wrap:wrap;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{display:inline-block;padding:7px 12px;border-radius:8px;color:var(--muted);font-weight:500;font-size:.94rem}
+.nav-links a:hover{background:var(--bg-soft);color:var(--navy);text-decoration:none}
+.nav-links a.active{color:var(--accent);background:var(--chip)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;
+  padding:6px 10px;font-size:1.1rem;cursor:pointer;color:var(--navy)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#0e2036 0%,#123a52 55%,#0b6e8f 100%);color:#fff;padding:64px 0 56px}
+.hero-inner{max-width:var(--maxw);margin:0 auto;padding:0 22px;display:grid;
+  grid-template-columns:150px 1fr;gap:34px;align-items:center}
+.avatar{width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.12);
+  border:3px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;
+  font-size:3rem;font-weight:700;color:#fff;overflow:hidden}
+.hero h1{margin:0 0 6px;font-size:2.15rem;letter-spacing:-.5px}
+.hero .tagline{margin:0 0 14px;color:#cfe6ef;font-weight:500;font-size:1.02rem}
+.hero .loc{color:#b7cede;font-size:.95rem;margin:0 0 16px}
+.hero-links{display:flex;flex-wrap:wrap;gap:10px}
+.hero-links a{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  color:#fff;padding:7px 14px;border-radius:20px;font-size:.88rem;font-weight:500}
+.hero-links a:hover{background:rgba(255,255,255,.24);text-decoration:none}
+
+/* Sections */
+main{padding:48px 0 60px}
+section{margin-bottom:46px}
+.page-title{font-size:1.9rem;color:var(--navy);margin:0 0 6px;letter-spacing:-.4px}
+.page-sub{color:var(--muted);margin:0 0 30px}
+h2.section-title{font-size:1.4rem;color:var(--navy);margin:0 0 18px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+h3{color:var(--navy);font-size:1.12rem;margin:26px 0 10px}
+p{margin:0 0 14px}
+.lead{font-size:1.08rem;color:var(--ink)}
+.mission{background:var(--bg-soft);border-left:4px solid var(--accent);padding:16px 20px;
+  border-radius:8px;margin:22px 0;color:var(--navy)}
+.mission strong{color:var(--accent)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:28px 0}
+.stat{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 14px;text-align:center}
+.stat .num{font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1.1}
+.stat .lbl{font-size:.85rem;color:var(--muted);margin-top:4px}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.chip{background:var(--chip);color:var(--accent);border-radius:16px;padding:4px 12px;font-size:.82rem;font-weight:500}
+
+/* Timeline */
+.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
+.tl-item{position:relative;margin-bottom:26px}
+.tl-item::before{content:"";position:absolute;left:-31px;top:5px;width:12px;height:12px;
+  background:var(--accent);border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--accent)}
+.tl-item .when{font-size:.85rem;color:var(--accent);font-weight:600}
+.tl-item h3{margin:2px 0 2px}
+.tl-item .where{color:var(--muted);font-size:.95rem;margin-bottom:6px}
+.tl-item ul{margin:6px 0 0;padding-left:18px}
+.tl-item li{margin-bottom:4px}
+
+/* Publications */
+.pub-group{margin-bottom:34px}
+.pub-list{list-style:none;margin:0;padding:0}
+.pub{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.pub .idx{flex:0 0 30px;font-weight:700;color:var(--accent);font-size:.95rem}
+.pub .body{flex:1}
+.pub .authors{color:var(--muted);font-size:.94rem}
+.pub .authors .me{color:var(--navy);font-weight:700}
+.pub .venue{font-style:italic;color:var(--navy)}
+.pub .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.badge{font-size:.74rem;font-weight:600;padding:2px 9px;border-radius:12px;text-transform:uppercase;letter-spacing:.4px}
+.badge.date{background:var(--chip);color:var(--accent)}
+.badge.review{background:#fff4e5;color:#b5651d}
+.badge.doi{background:#eef2f7;color:var(--muted)}
+.badge.doi a{color:var(--muted)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.info-row{display:flex;gap:10px;margin-bottom:12px}
+.info-row .k{font-weight:600;color:var(--navy);min-width:84px}
+.ref-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:14px}
+.ref-card .name{font-weight:700;color:var(--navy)}
+.ref-card .role{color:var(--muted);font-size:.92rem}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 20px;border-radius:8px;font-weight:600;font-size:.95rem}
+.btn:hover{background:#095b76;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.btn.ghost:hover{background:var(--chip)}
+
+/* Footer */
+footer{background:var(--navy);color:#b7cede;padding:30px 0;font-size:.9rem}
+footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+footer a{color:#9ed4e6}
+
+/* Responsive */
+@media (max-width:760px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;width:100%;flex-direction:column;padding-top:10px}
+  .nav-links.open{display:flex}
+  .nav-inner{flex-wrap:wrap}
+  .hero-inner{grid-template-columns:1fr;text-align:center;justify-items:center;gap:20px}
+  .hero-links{justify-content:center}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Md. Ahasan <span>Ahamed</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+  <h1 class="page-title">Publications</h1>
+  <p class="page-sub">20+ peer-reviewed articles &middot; 254 citations &middot; h-index 8 (Google Scholar). <span style="color:var(--navy);font-weight:600">Bold</span> indicates the author; <sup>&#42;</sup> denotes corresponding author.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="num">8</div><div class="lbl">First / co-first author</div></div>
+    <div class="stat"><div class="num">7</div><div class="lbl">Co-author articles</div></div>
+    <div class="stat"><div class="num">6</div><div class="lbl">Review articles</div></div>
+    <div class="stat"><div class="num">9</div><div class="lbl">Conference talks/posters</div></div>
+  </div>
+
+  <div class="pub-group">
+    <h2 class="section-title">First / Co-First Author Research Articles</h2>
+    <ul class="pub-list">
+      <li class="pub"><div class="idx">1</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Khalid MAU, Guo B, Kshirsagar A, &amp; Guan W<sup>&#42;</sup>.</div>
+        Fully integrated solid-state nanopore analysis for real-time amplification-reaction-coupled molecular counting.
+        <div class="meta"><span class="badge review">Under review</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">2</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Khalid MAU, Politza AJ, Zaman WU, &amp; Guan W<sup>&#42;</sup>.</div>
+        Electronic multiplexed RPA amplicons profiling via probe-free nanopore sensing and deep learning classification. <span class="venue">J. Am. Chem. Soc.</span>
+        <div class="meta"><span class="badge review">Under review</span><span class="badge doi"><a href="https://doi.org/10.1101/2025.04.24.650542" target="_blank" rel="noopener">bioRxiv</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">3</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Zhang Z, Kshirsagar A, Politza AJ, Sethuraman U, Suresh S, Hicks S, Guo F, &amp; Guan W<sup>&#42;</sup>.</div>
+        Multiplexed salivary miRNA quantification for predicting severe COVID-19 symptoms in children using ligation-RPA amplification assay. <span class="venue">ACS Sens.</span>
+        <div class="meta"><span class="badge date">Jul 2025</span><span class="badge doi"><a href="https://doi.org/10.1021/acssensors.5c01275" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">4</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Khalid MAU, Dong M, Politza AJ, Zhang Z, Kshirsagar A, Liu T, &amp; Guan W<sup>&#42;</sup>.</div>
+        Sensitive and specific CRISPR-Cas12a assisted nanopore with RPA for Monkeypox detection. <span class="venue">Biosens. Bioelectron.</span> 246, 115866.
+        <div class="meta"><span class="badge date">Feb 2024</span><span class="badge doi"><a href="https://doi.org/10.1016/j.bios.2023.115866" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">5</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Kim G, Li Z, &amp; Kim SJ<sup>&#42;</sup>.</div>
+        Pre-programmed microdroplet generator to control wide-ranging chemical concentrations. <span class="venue">Anal. Chim. Acta</span> 1236, 340587.
+        <div class="meta"><span class="badge date">Dec 2022</span><span class="badge doi"><a href="https://doi.org/10.1016/j.aca.2022.340587" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+    </ul>
+  </div>
+
+  <div class="pub-group">
+    <h2 class="section-title">Co-Author Research Articles</h2>
+    <ul class="pub-list">
+      <li class="pub"><div class="idx">6</div><div class="body">
+        <div class="authors">Guo B, <span class="me">Ahamed MA</span>, Khalid MAU, Kshirsagar A, Pal T, &amp; Guan W<sup>&#42;</sup>.</div>
+        Calibration-free multiplexed detection of Alzheimer's disease biomarkers by direct readout on a programmed DNA carrier-enabled glass nanopore platform. <span class="venue">Nat. Commun.</span>
+        <div class="meta"><span class="badge review">Under review</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">7</div><div class="body">
+        <div class="authors">Khalid MAU, Pal T, <span class="me">Ahamed MA</span>, Guo B, &amp; Guan W<sup>&#42;</sup>.</div>
+        A figure of merit for comparing plasmonic PCR systems. <span class="venue">ACS Sens.</span>
+        <div class="meta"><span class="badge review">Under review</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">8</div><div class="body">
+        <div class="authors">Kshirsagar A, Politza AJ, Liu T, <span class="me">Ahamed MA</span>, Dong M, Khalid MAU, &amp; Guan W<sup>&#42;</sup>.</div>
+        ViraLite: an ultracompact HIV viral load self-testing system with internal quality control. <span class="venue">Microsyst. Nanoeng.</span>
+        <div class="meta"><span class="badge date">Accepted 2026</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">9</div><div class="body">
+        <div class="authors">Liu T, Politza AJ, Kshirsagar A, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>.</div>
+        Rapid simultaneous self-testing of HIV and HCV viral loads with integrated RNA extraction and multiplex RT-PCR in under 1 hour. <span class="venue">Biosens. Bioelectron.</span>
+        <div class="meta"><span class="badge date">Aug 2025</span><span class="badge doi"><a href="https://doi.org/10.1016/j.bios.2025.117843" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">10</div><div class="body">
+        <div class="authors">Khalid MAU, <span class="me">Ahamed MA</span>, Politza AJ, &amp; Guan W<sup>&#42;</sup>.</div>
+        Solid-state nanopore sizing for cfDNA sample quality control in point-of-need sequencing. <span class="venue">ACS Sens.</span>
+        <div class="meta"><span class="badge date">Jun 2025</span><span class="badge doi"><a href="https://doi.org/10.1021/acssensors.5c00803" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">11</div><div class="body">
+        <div class="authors">Dong M, Kshirsagar A, Politza AJ, Khalid MAU, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>.</div>
+        Addressing buffer, size, and clogging challenges in LAMP-coupled solid-state nanopores for point-of-care testing. <span class="venue">Anal. Chem.</span>
+        <div class="meta"><span class="badge date">Mar 2025</span><span class="badge doi"><a href="https://doi.org/10.1021/acs.analchem.4c06823" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">12</div><div class="body">
+        <div class="authors">Liu T, Politza AJ, <span class="me">Ahamed MA</span>, Kshirsagar A, Zhu Y, &amp; Guan W<sup>&#42;</sup>.</div>
+        Compact multiplex PCR device for HIV-1 and HIV-2 viral load determination from finger-prick whole blood in resource-limited settings. <span class="venue">Biosens. Bioelectron.</span> 271, 116997.
+        <div class="meta"><span class="badge date">Mar 2025</span><span class="badge doi"><a href="https://doi.org/10.1016/j.bios.2024.116997" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">13</div><div class="body">
+        <div class="authors">Khalid MAU, <span class="me">Ahamed MA</span>, Dong M, Kshirsagar A, &amp; Guan W<sup>&#42;</sup>.</div>
+        Hydrogel interfaced glass nanopore for high-resolution sizing of short DNA fragments. <span class="venue">Biosens. Bioelectron.</span>
+        <div class="meta"><span class="badge date">Jan 2025</span><span class="badge doi"><a href="https://doi.org/10.1016/j.bios.2024.116895" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">14</div><div class="body">
+        <div class="authors">Politza AJ, Liu T, Kshirsagar A, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>.</div>
+        Development and validation of a portable device for lab-free versatile nucleic acid extraction. <span class="venue">BioTechniques</span> 1&ndash;11.
+        <div class="meta"><span class="badge date">Dec 2024</span><span class="badge doi"><a href="https://doi.org/10.1080/07366205.2024.2427544" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">15</div><div class="body">
+        <div class="authors">Politza AJ, Liu T, Kshirsagar A, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>.</div>
+        A portable centrifuge for universal nucleic acid extraction at the point-of-care. <span class="venue">SSRN</span>.
+        <div class="meta"><span class="badge date">Apr 2024</span><span class="badge doi"><a href="https://doi.org/10.2139/ssrn.4781228" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+    </ul>
+  </div>
+
+  <div class="pub-group">
+    <h2 class="section-title">Review Articles</h2>
+    <ul class="pub-list">
+      <li class="pub"><div class="idx">16</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Guo B, Khalid MAU, Pal T, Guo F, &amp; Guan W<sup>&#42;</sup>.</div>
+        Point-of-care testing for early diagnosis and population screening of Alzheimer's disease: recent advances and perspectives. <span class="venue">Nano Today</span> 69, 103033.
+        <div class="meta"><span class="badge date">Mar 2026</span><span class="badge doi"><a href="https://doi.org/10.1016/j.nantod.2026.103033" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">17</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Hasan M, Kabir ME, &amp; Zhang Z.</div>
+        Microfluidic hydraulic oscillators: a comprehensive review of emerging biochemical and biomedical applications. <span class="venue">Anal. Chim. Acta</span> 343793.
+        <div class="meta"><span class="badge date">May 2025</span><span class="badge doi"><a href="https://doi.org/10.1016/j.aca.2025.343793" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">18</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span> &amp; Guan W<sup>&#42;</sup>.</div>
+        Opportunities and challenges in implementing CRISPR-based point-of-care testing for Monkeypox detection. <span class="venue">BioTechniques</span>.
+        <div class="meta"><span class="badge date">Apr 2025</span><span class="badge doi"><a href="https://doi.org/10.1080/07366205.2025.2473827" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">19</div><div class="body">
+        <div class="authors">Zhang Z, <span class="me">Ahamed MA</span>, &amp; Yang D<sup>&#42;</sup>.</div>
+        DNA nanomaterial-based sensing platform for exosomal miRNA detection in disease diagnosis. <span class="venue">Sens. Diagn.</span>
+        <div class="meta"><span class="badge date">Feb 2025</span><span class="badge doi"><a href="https://doi.org/10.1039/D4SD00373J" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">20</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Politza AJ, Liu T, Khalid MAU, Zhang H, &amp; Guan W<sup>&#42;</sup>.</div>
+        CRISPR-based strategies for sample-to-answer Monkeypox detection: current status and emerging opportunities. <span class="venue">Nanotechnology</span> 36, 042001.
+        <div class="meta"><span class="badge date">Nov 2024</span><span class="badge doi"><a href="https://doi.org/10.1088/1361-6528/ad892b" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">21</div><div class="body">
+        <div class="authors">Zhang Z, Liu T, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>.</div>
+        Sample-to-answer salivary miRNA testing: new frontiers in point-of-care diagnostic technologies. <span class="venue">WIREs Nanomed. Nanobiotechnol.</span> 16(3), e1969.
+        <div class="meta"><span class="badge date">May 2024</span><span class="badge doi"><a href="https://doi.org/10.1002/wnan.1969" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+    </ul>
+  </div>
+
+  <div class="pub-group">
+    <h2 class="section-title">Other Publications</h2>
+    <ul class="pub-list">
+      <li class="pub"><div class="idx">22</div><div class="body">
+        <div class="authors">Syduzzaman Md<sup>&#42;</sup>, Akter M, Mahmud F, Bhowmick DR, Maliha AS, Hossain T, &amp; <span class="me">Ahamed MA</span>.</div>
+        Tensile properties of banana fiber reinforced recycled high-density polyethylene composites: an experimental investigation. <span class="venue">SPE Polym.</span> 5(3), 306&ndash;317.
+        <div class="meta"><span class="badge date">Feb 2024</span><span class="badge doi"><a href="https://doi.org/10.1002/pls2.10125" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">23</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Reza MI, &amp; Al-Amin Md.</div>
+        Electricity generation from speed breaker by air compression method using Wells turbine. <span class="venue">J. Adv. Eng. Comput.</span> 4(2), 140&ndash;148.
+        <div class="meta"><span class="badge date">Jun 2020</span><span class="badge doi"><a href="https://doi.org/10.25073/jaec.202042.277" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+      <li class="pub"><div class="idx">24</div><div class="body">
+        <div class="authors">Rashid MM<sup>&#42;</sup>, Abir N, Kamal SHB, Al-Amin Md, <span class="me">Ahamed MA</span>, Islam MT, &amp; Iqbal I.</div>
+        Functionalized cellulose for textile organic pollutant treatment: a comprehensive review. <span class="venue">Water Conserv. Sci. Eng.</span>
+        <div class="meta"><span class="badge date">Mar 2024</span><span class="badge doi"><a href="https://doi.org/10.1007/s41101-024-00243-1" target="_blank" rel="noopener">DOI</a></span></div>
+      </div></li>
+    </ul>
+  </div>
+
+  <div class="pub-group">
+    <h2 class="section-title">Conference Presentations, Posters &amp; Proceedings</h2>
+    <ul class="pub-list">
+      <li class="pub"><div class="idx">O</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Zhang Z, Kshirsagar A, Politza AJ, Sethuraman U, Suresh S, Guo F, &amp; Guan W.</div>
+        Quantitative detection of severe COVID-19 in children via multiplex salivary miRNA profiling using ligation RPA. <span class="venue">BMES</span>. <em>(Oral)</em>
+        <div class="meta"><span class="badge date">Oct 2025</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">O</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span>, Khalid MAU, Politza AJ, Zaman WU, &amp; Guan W.</div>
+        Single-molecule nanopore and deep-learning platform for probe-free multiplex RPA detection. <span class="venue">BMES</span>. <em>(Oral)</em>
+        <div class="meta"><span class="badge date">Oct 2025</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">O</div><div class="body">
+        <div class="authors">Khalid MAU, <span class="me">Ahamed MA</span>, Dong M, Kshirsagar A, &amp; Guan W.</div>
+        Hydrogel-interfaced nanopore system for sub-100 bp sizing and multiplexed virus detection. <span class="venue">BMES</span>. <em>(Oral)</em>
+        <div class="meta"><span class="badge date">Oct 2025</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">O</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span> &amp; Kim SJ.</div>
+        Periodic decrease stepwise waveform generator. <span class="venue">IEEE-NANOMED</span>. <em>(Oral)</em>
+        <div class="meta"><span class="badge date">Oct 2021</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">O</div><div class="body">
+        <div class="authors">Politza AJ, Liu T, Kshirsagar A, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W.</div>
+        Development of a multiplexed LAMP assay for HIV viral load monitoring. <span class="venue">NIH Building Bridges, Bethesda</span>. <em>(Oral)</em>
+        <div class="meta"><span class="badge date">Oct 2024</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">P</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span> &amp; Guan W.</div>
+        CRISPR-assisted solid-state nanopore sensor for rapid point-of-care detection of Monkeypox virus via RPA amplification. <span class="venue">Biophysical Journal</span> 123(S1):145a. <em>(Proceedings)</em>
+        <div class="meta"><span class="badge date">Feb 2024</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">P</div><div class="body">
+        <div class="authors">Liu T, Politza AJ, <span class="me">Ahamed MA</span>, Kshirsagar A, &amp; Guan W.</div>
+        Battery-powered portable multiplexed RT-PCR for HIV-1 and HIV-2 viral load testing at LMIC. <span class="venue">IEEE SENSORS</span>. <em>(Proceedings)</em>
+        <div class="meta"><span class="badge date">Oct 2024</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">P</div><div class="body">
+        <div class="authors">Khalid MAU, <span class="me">Ahamed MA</span>, Politza AJ, &amp; Guan W.</div>
+        Solid-state nanopore sensor for cfDNA sample quality control in point-of-need sequencing. <span class="venue">BMES</span>. <em>(Poster)</em>
+        <div class="meta"><span class="badge date">Oct 2025</span></div>
+      </div></li>
+      <li class="pub"><div class="idx">P</div><div class="body">
+        <div class="authors"><span class="me">Ahamed MA</span> &amp; Kim SJ.</div>
+        Autonomous periodic stepwise pressure generator. <span class="venue">KSME</span>. <em>(Poster)</em>
+        <div class="meta"><span class="badge date">Nov 2021</span></div>
+      </div></li>
+    </ul>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div>&copy; 2026 Md. Ahasan Ahamed</div>
+    <div>Bloomington, IN &middot; <a href="mailto:mja6561@psu.edu">mja6561@psu.edu</a></div>
+  </div>
+</footer>
+<script>
+// mobile nav toggle
+document.addEventListener('DOMContentLoaded',function(){
+  var t=document.querySelector('.nav-toggle');
+  var l=document.querySelector('.nav-links');
+  if(t&&l){t.addEventListener('click',function(){l.classList.toggle('open');});}
+});
+
+</script>
+</body>
+</html>

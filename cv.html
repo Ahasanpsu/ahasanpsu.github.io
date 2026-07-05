@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV | Md. Ahasan Ahamed</title>
+<meta name="description" content="Curriculum vitae of Md. Ahasan Ahamed: experience, skills, awards, and certifications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===========================================================
+   Md. Ahasan Ahamed — Academic Website — shared stylesheet
+   =========================================================== */
+:root{
+  --navy:#12233b; --accent:#0b6e8f; --accent-2:#12a1c9;
+  --ink:#1f2933; --muted:#5b6b7b; --line:#e3e8ee;
+  --bg:#ffffff; --bg-soft:#f6f8fb; --chip:#eaf4f8;
+  --maxw:980px; --radius:10px; --shadow:0 2px 14px rgba(18,35,59,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* Navbar */
+.navbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 22px;display:flex;
+  align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:700;color:var(--navy);font-size:1.05rem;letter-spacing:.2px}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;flex-wrap:wrap;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{display:inline-block;padding:7px 12px;border-radius:8px;color:var(--muted);font-weight:500;font-size:.94rem}
+.nav-links a:hover{background:var(--bg-soft);color:var(--navy);text-decoration:none}
+.nav-links a.active{color:var(--accent);background:var(--chip)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;
+  padding:6px 10px;font-size:1.1rem;cursor:pointer;color:var(--navy)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#0e2036 0%,#123a52 55%,#0b6e8f 100%);color:#fff;padding:64px 0 56px}
+.hero-inner{max-width:var(--maxw);margin:0 auto;padding:0 22px;display:grid;
+  grid-template-columns:150px 1fr;gap:34px;align-items:center}
+.avatar{width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.12);
+  border:3px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;
+  font-size:3rem;font-weight:700;color:#fff;overflow:hidden}
+.hero h1{margin:0 0 6px;font-size:2.15rem;letter-spacing:-.5px}
+.hero .tagline{margin:0 0 14px;color:#cfe6ef;font-weight:500;font-size:1.02rem}
+.hero .loc{color:#b7cede;font-size:.95rem;margin:0 0 16px}
+.hero-links{display:flex;flex-wrap:wrap;gap:10px}
+.hero-links a{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  color:#fff;padding:7px 14px;border-radius:20px;font-size:.88rem;font-weight:500}
+.hero-links a:hover{background:rgba(255,255,255,.24);text-decoration:none}
+
+/* Sections */
+main{padding:48px 0 60px}
+section{margin-bottom:46px}
+.page-title{font-size:1.9rem;color:var(--navy);margin:0 0 6px;letter-spacing:-.4px}
+.page-sub{color:var(--muted);margin:0 0 30px}
+h2.section-title{font-size:1.4rem;color:var(--navy);margin:0 0 18px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+h3{color:var(--navy);font-size:1.12rem;margin:26px 0 10px}
+p{margin:0 0 14px}
+.lead{font-size:1.08rem;color:var(--ink)}
+.mission{background:var(--bg-soft);border-left:4px solid var(--accent);padding:16px 20px;
+  border-radius:8px;margin:22px 0;color:var(--navy)}
+.mission strong{color:var(--accent)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:28px 0}
+.stat{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 14px;text-align:center}
+.stat .num{font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1.1}
+.stat .lbl{font-size:.85rem;color:var(--muted);margin-top:4px}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.chip{background:var(--chip);color:var(--accent);border-radius:16px;padding:4px 12px;font-size:.82rem;font-weight:500}
+
+/* Timeline */
+.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
+.tl-item{position:relative;margin-bottom:26px}
+.tl-item::before{content:"";position:absolute;left:-31px;top:5px;width:12px;height:12px;
+  background:var(--accent);border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--accent)}
+.tl-item .when{font-size:.85rem;color:var(--accent);font-weight:600}
+.tl-item h3{margin:2px 0 2px}
+.tl-item .where{color:var(--muted);font-size:.95rem;margin-bottom:6px}
+.tl-item ul{margin:6px 0 0;padding-left:18px}
+.tl-item li{margin-bottom:4px}
+
+/* Publications */
+.pub-group{margin-bottom:34px}
+.pub-list{list-style:none;margin:0;padding:0}
+.pub{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.pub .idx{flex:0 0 30px;font-weight:700;color:var(--accent);font-size:.95rem}
+.pub .body{flex:1}
+.pub .authors{color:var(--muted);font-size:.94rem}
+.pub .authors .me{color:var(--navy);font-weight:700}
+.pub .venue{font-style:italic;color:var(--navy)}
+.pub .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.badge{font-size:.74rem;font-weight:600;padding:2px 9px;border-radius:12px;text-transform:uppercase;letter-spacing:.4px}
+.badge.date{background:var(--chip);color:var(--accent)}
+.badge.review{background:#fff4e5;color:#b5651d}
+.badge.doi{background:#eef2f7;color:var(--muted)}
+.badge.doi a{color:var(--muted)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.info-row{display:flex;gap:10px;margin-bottom:12px}
+.info-row .k{font-weight:600;color:var(--navy);min-width:84px}
+.ref-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:14px}
+.ref-card .name{font-weight:700;color:var(--navy)}
+.ref-card .role{color:var(--muted);font-size:.92rem}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 20px;border-radius:8px;font-weight:600;font-size:.95rem}
+.btn:hover{background:#095b76;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.btn.ghost:hover{background:var(--chip)}
+
+/* Footer */
+footer{background:var(--navy);color:#b7cede;padding:30px 0;font-size:.9rem}
+footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+footer a{color:#9ed4e6}
+
+/* Responsive */
+@media (max-width:760px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;width:100%;flex-direction:column;padding-top:10px}
+  .nav-links.open{display:flex}
+  .nav-inner{flex-wrap:wrap}
+  .hero-inner{grid-template-columns:1fr;text-align:center;justify-items:center;gap:20px}
+  .hero-links{justify-content:center}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Md. Ahasan <span>Ahamed</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="cv.html" class="active">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+  <h1 class="page-title">Curriculum Vitae</h1>
+  <p class="page-sub">Experience, skills, awards, and certifications. <a class="btn ghost" href="Md_Ahasan_Ahamed_CV.pdf" target="_blank" style="margin-left:8px">Download full CV (PDF)</a></p>
+
+  <section>
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="when">2025 &ndash; 2026</div>
+        <h3>Visiting Scholar</h3>
+        <div class="where">Indiana University, Bloomington, IN, USA</div>
+        <ul>
+          <li>Supported the operational setup of a new biosensing and molecular diagnostics laboratory, including instrument installation, qualification, workflow development, and in-house troubleshooting.</li>
+          <li>Maintained and operated core instrumentation for nanopore sensing, fluorescence detection, microfluidic fabrication, and portable diagnostic device development.</li>
+          <li>Developed experimental workflows and preliminary data for NSF and NIH proposal submissions.</li>
+          <li>Supported projects in salivary miRNA diagnostics, nanopore-based molecular detection, and portable point-of-care systems.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="when">2022 &ndash; 2026</div>
+        <h3>Graduate Research Assistant</h3>
+        <div class="where">Pennsylvania State University, University Park, PA, USA</div>
+        <ul>
+          <li>Designed a point-of-care COVID-19 detection platform with a 42-minute turnaround.</li>
+          <li>Developed CRISPR-based nanopore detection, achieving 100% specificity.</li>
+          <li>Improved diagnostic accuracy to 94.2% using machine learning models.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="when">2020 &ndash; 2022</div>
+        <h3>Graduate Research Assistant</h3>
+        <div class="where">Konkuk University, Seoul, South Korea</div>
+        <ul>
+          <li>Developed an autonomous hydraulic microfluidic oscillator (0.31&ndash;237 Pa).</li>
+          <li>Designed microdroplet generators with 3rd-order concentration tuning.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="when">2019 &ndash; 2020</div>
+        <h3>Director of Transportation and Service</h3>
+        <div class="where">Bangladesh University of Textiles (BUTEX), Dhaka, Bangladesh</div>
+        <ul>
+          <li>Led a 15-member team; managed budgets, salaries, and logistics, saving $13,000.</li>
+          <li>Oversaw 17 vehicles and reduced annual maintenance cost by $1,000.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="when">2014 &ndash; 2020</div>
+        <h3>Assistant Professor &amp; Lecturer</h3>
+        <div class="where">IPE Dept., BUTEX (2015&ndash;2020) &middot; Eng. Dept., BGMEA Univ. of Fashion &amp; Tech. (2014&ndash;2015), Dhaka</div>
+        <ul>
+          <li>Delivered 5 courses per year to 30&ndash;80 students per class; managed up to 27 credit hours/semester.</li>
+          <li>Mentored students into academia and industry leadership; developed new course outlines.</li>
+          <li>Boosted student performance by 63%; kept failure rate under 12%.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Wet Lab &amp; Assays</h3>
+        <p>Assay development (CRISPR, RPA, LAMP, PCR), microfluidic chip fabrication and bonding, solid-state nanopore fabrication, soft lithography, digital droplet quantification, gel electrophoresis, Nanodrop quantification.</p>
+      </div>
+      <div class="card">
+        <h3>Instrumentation &amp; Characterization</h3>
+        <p>Laser systems (Universal Laser VLS3.60ES, Coherent OBIS, Sutter P-2000), 3D printing / 5-axis CNC, confocal and optical microscopy, vacuum/plasma systems, pressure controllers (ELVESYS, Fluigent), plate readers, Axopatch 200b.</p>
+      </div>
+      <div class="card">
+        <h3>Embedded Systems &amp; Integration</h3>
+        <p>Sensor-to-electronics integration, embedded readout, real-time data acquisition, NVIDIA Jetson Orin edge computing with Python APIs, PCB design and layout, Arduino microcontrollers.</p>
+      </div>
+      <div class="card">
+        <h3>Computation &amp; Data Analysis</h3>
+        <p>MATLAB/Simulink, Python, C++, ImageJ, Origin, COMSOL Multiphysics, PLECS, TCAD Sentaurus; machine learning, DSP, feature extraction, and predictive modeling in biophysics.</p>
+      </div>
+      <div class="card">
+        <h3>Design &amp; Engineering</h3>
+        <p>SolidWorks, AutoCAD, Inventor, LabVIEW (automation &amp; control), LaTeX academic writing.</p>
+      </div>
+      <div class="card">
+        <h3>Languages &amp; Soft Skills</h3>
+        <p>Scientific writing (peer-reviewed articles, NSF/NIH proposals), project management, lab operations. Fluent in English, native in Bengali, basic Arabic.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Awards &amp; Honors</h2>
+    <ul>
+      <li>Graduate Research Assistantship, Pennsylvania State University ($38K/yr), 2022&ndash;2026.</li>
+      <li>Melvin P. Bloom Memorial Graduate Fellowship in Electrical Engineering, Penn State ($1,000), June 2024.</li>
+      <li>BPS Travel Award, Biophysical Society ($500), 2024.</li>
+      <li>Certificate of Excellence in Reviewing, Journal of Engineering Research and Reports, 2023.</li>
+      <li>4th Stage BK21+ Scholarship, Konkuk University (~$7.1K/yr), 2020&ndash;2021.</li>
+      <li>Merit &amp; Dean's List Scholarships and Gold Medal, BUET (~$1.2K), 2012&ndash;2013.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title">Referee Services</h2>
+    <p>Scientific Reports (Springer Nature) &middot; IEEE Sensors Letters (IEEE) &middot; Trends in Biotechnology (Elsevier, Cell Press) &middot; Frontiers in Microbiology &middot; IEEE BIOSENSORS 2025 (San Diego, CA, Aug 2&ndash;5, 2025).</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Certifications</h2>
+    <p>Bloodborne Pathogens Training (CITI, IU, 2025) &middot; IUEHS Biosafety Training (CITI, 2022&ndash;2025) &middot; NIH Recombinant DNA Guidelines (CITI, 2024) &middot; Good Clinical Practice, U.S. FDA Focus (CITI, 2024) &middot; FDA-Regulated Research (CITI, 2024) &middot; Biomedical Human Subjects Research (CITI, 2024) &middot; OSHA Bloodborne Pathogens (2024) &middot; Responsible Conduct of Research (CITI, 2022).</p>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div>&copy; 2026 Md. Ahasan Ahamed</div>
+    <div>Bloomington, IN &middot; <a href="mailto:mja6561@psu.edu">mja6561@psu.edu</a></div>
+  </div>
+</footer>
+<script>
+// mobile nav toggle
+document.addEventListener('DOMContentLoaded',function(){
+  var t=document.querySelector('.nav-toggle');
+  var l=document.querySelector('.nav-links');
+  if(t&&l){t.addEventListener('click',function(){l.classList.toggle('open');});}
+});
+
+</script>
+</body>
+</html>

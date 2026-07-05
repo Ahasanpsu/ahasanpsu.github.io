@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Md. Ahasan Ahamed</title>
+<meta name="description" content="Research projects in nanopore sensing, point-of-care diagnostics, and microfluidics by Md. Ahasan Ahamed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===========================================================
+   Md. Ahasan Ahamed — Academic Website — shared stylesheet
+   =========================================================== */
+:root{
+  --navy:#12233b; --accent:#0b6e8f; --accent-2:#12a1c9;
+  --ink:#1f2933; --muted:#5b6b7b; --line:#e3e8ee;
+  --bg:#ffffff; --bg-soft:#f6f8fb; --chip:#eaf4f8;
+  --maxw:980px; --radius:10px; --shadow:0 2px 14px rgba(18,35,59,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* Navbar */
+.navbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 22px;display:flex;
+  align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:700;color:var(--navy);font-size:1.05rem;letter-spacing:.2px}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;flex-wrap:wrap;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{display:inline-block;padding:7px 12px;border-radius:8px;color:var(--muted);font-weight:500;font-size:.94rem}
+.nav-links a:hover{background:var(--bg-soft);color:var(--navy);text-decoration:none}
+.nav-links a.active{color:var(--accent);background:var(--chip)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;
+  padding:6px 10px;font-size:1.1rem;cursor:pointer;color:var(--navy)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#0e2036 0%,#123a52 55%,#0b6e8f 100%);color:#fff;padding:64px 0 56px}
+.hero-inner{max-width:var(--maxw);margin:0 auto;padding:0 22px;display:grid;
+  grid-template-columns:150px 1fr;gap:34px;align-items:center}
+.avatar{width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.12);
+  border:3px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;
+  font-size:3rem;font-weight:700;color:#fff;overflow:hidden}
+.hero h1{margin:0 0 6px;font-size:2.15rem;letter-spacing:-.5px}
+.hero .tagline{margin:0 0 14px;color:#cfe6ef;font-weight:500;font-size:1.02rem}
+.hero .loc{color:#b7cede;font-size:.95rem;margin:0 0 16px}
+.hero-links{display:flex;flex-wrap:wrap;gap:10px}
+.hero-links a{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  color:#fff;padding:7px 14px;border-radius:20px;font-size:.88rem;font-weight:500}
+.hero-links a:hover{background:rgba(255,255,255,.24);text-decoration:none}
+
+/* Sections */
+main{padding:48px 0 60px}
+section{margin-bottom:46px}
+.page-title{font-size:1.9rem;color:var(--navy);margin:0 0 6px;letter-spacing:-.4px}
+.page-sub{color:var(--muted);margin:0 0 30px}
+h2.section-title{font-size:1.4rem;color:var(--navy);margin:0 0 18px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+h3{color:var(--navy);font-size:1.12rem;margin:26px 0 10px}
+p{margin:0 0 14px}
+.lead{font-size:1.08rem;color:var(--ink)}
+.mission{background:var(--bg-soft);border-left:4px solid var(--accent);padding:16px 20px;
+  border-radius:8px;margin:22px 0;color:var(--navy)}
+.mission strong{color:var(--accent)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:28px 0}
+.stat{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 14px;text-align:center}
+.stat .num{font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1.1}
+.stat .lbl{font-size:.85rem;color:var(--muted);margin-top:4px}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.chip{background:var(--chip);color:var(--accent);border-radius:16px;padding:4px 12px;font-size:.82rem;font-weight:500}
+
+/* Timeline */
+.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
+.tl-item{position:relative;margin-bottom:26px}
+.tl-item::before{content:"";position:absolute;left:-31px;top:5px;width:12px;height:12px;
+  background:var(--accent);border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--accent)}
+.tl-item .when{font-size:.85rem;color:var(--accent);font-weight:600}
+.tl-item h3{margin:2px 0 2px}
+.tl-item .where{color:var(--muted);font-size:.95rem;margin-bottom:6px}
+.tl-item ul{margin:6px 0 0;padding-left:18px}
+.tl-item li{margin-bottom:4px}
+
+/* Publications */
+.pub-group{margin-bottom:34px}
+.pub-list{list-style:none;margin:0;padding:0}
+.pub{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.pub .idx{flex:0 0 30px;font-weight:700;color:var(--accent);font-size:.95rem}
+.pub .body{flex:1}
+.pub .authors{color:var(--muted);font-size:.94rem}
+.pub .authors .me{color:var(--navy);font-weight:700}
+.pub .venue{font-style:italic;color:var(--navy)}
+.pub .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.badge{font-size:.74rem;font-weight:600;padding:2px 9px;border-radius:12px;text-transform:uppercase;letter-spacing:.4px}
+.badge.date{background:var(--chip);color:var(--accent)}
+.badge.review{background:#fff4e5;color:#b5651d}
+.badge.doi{background:#eef2f7;color:var(--muted)}
+.badge.doi a{color:var(--muted)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.info-row{display:flex;gap:10px;margin-bottom:12px}
+.info-row .k{font-weight:600;color:var(--navy);min-width:84px}
+.ref-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:14px}
+.ref-card .name{font-weight:700;color:var(--navy)}
+.ref-card .role{color:var(--muted);font-size:.92rem}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 20px;border-radius:8px;font-weight:600;font-size:.95rem}
+.btn:hover{background:#095b76;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.btn.ghost:hover{background:var(--chip)}
+
+/* Footer */
+footer{background:var(--navy);color:#b7cede;padding:30px 0;font-size:.9rem}
+footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+footer a{color:#9ed4e6}
+
+/* Responsive */
+@media (max-width:760px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;width:100%;flex-direction:column;padding-top:10px}
+  .nav-links.open{display:flex}
+  .nav-inner{flex-wrap:wrap}
+  .hero-inner{grid-template-columns:1fr;text-align:center;justify-items:center;gap:20px}
+  .hero-links{justify-content:center}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Md. Ahasan <span>Ahamed</span></a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<div class="container">
+  <h1 class="page-title">Research</h1>
+  <p class="page-sub">Selected projects across single-molecule sensing, point-of-care diagnostics, and microfluidics.</p>
+
+  <section>
+    <h2 class="section-title">Funding &amp; Grant Proposals</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>NSF ECCS Award #2603909 &mdash; Awarded</h3>
+        <p>Machine-learning-enhanced solid-state nanopore sensing for multiplexed nucleic-acid detection. $494K, 2026&ndash;2029. PI: W. Guan. Contributed project concept, preliminary data, and proposal writing.</p>
+      </div>
+      <div class="card">
+        <h3>TTP-P HIV &mdash; Submitted (Aug 2025)</h3>
+        <p>Portable, quantitative point-of-care platform for HIV viral load monitoring in low-resource and underserved settings. Authored the complete project description. PI: W. Guan.</p>
+      </div>
+      <div class="card">
+        <h3>SIMPLE-AD &mdash; Submitted (Apr 2025)</h3>
+        <p>Salivary isothermal multiplexed microfluidic miRNA profiling for lab-free and early Alzheimer detection. Lead writer of the full proposal. PI: W. Guan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Research Projects</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="when">May 2025 &ndash; Present &middot; Indiana University, Guan Lab</div>
+        <h3>Real-Time Quantification of RPA Amplicons via Single-Molecule Nanopore Sensing</h3>
+        <ul>
+          <li>Investigated RPA reaction kinetics using single-molecule nanopore sensing.</li>
+          <li>Performed qualitative and quantitative measurement of RPA amplicons by nanopore readout.</li>
+          <li>Developed experimental workflows for real-time amplification-reaction-coupled molecular counting.</li>
+          <li>Led assay optimization, nanopore measurements, real-time data analysis, and manuscript/proposal development.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="when">Jun 2024 &ndash; May 2025 &middot; Penn State &amp; Indiana University, Guan Lab</div>
+        <h3>Probe-Free Multiplex Detection of RPA Amplicons via Deep Learning</h3>
+        <ul>
+          <li>Developed a probe-free multiplex RPA assay for Mpox and RNase P, achieving 100% specificity.</li>
+          <li>Achieved 94.2% single-molecule classification accuracy using deep neural networks.</li>
+          <li>Detected signals from 75 bp to 500 bp DNA fragments using 3.4 to 12.4 nm pores.</li>
+          <li>Led nanopore experiments, signal-feature analysis, and deep learning model evaluation.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="when">Feb 2024 &ndash; Dec 2024 &middot; Penn State, Guan Lab</div>
+        <h3>Multiplex Ligation-RPA for Early Prediction of Severe SARS-CoV-2</h3>
+        <ul>
+          <li>Developed a multiplex ligation-RPA assay with femtomolar sensitivity and 100% specificity.</li>
+          <li>Engineered a portable, sample-to-answer system integrating compact fluorescence detection and rapid miRNA extraction.</li>
+          <li>Validated the assay using 154 clinical saliva samples targeting miR-1273, miR-296, and miR-29.</li>
+          <li>Led assay optimization, clinical sample analysis, and portable workflow validation.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="when">Aug 2022 &ndash; Feb 2024 &middot; Penn State, Guan Lab</div>
+        <h3>RPA-CRISPR Assisted Nanopore Sensing for Mpox Detection</h3>
+        <ul>
+          <li>Developed a CRISPR-Cas12a-RPA assay for Mpox detection with 100% specificity and an LOD of 16 copies/&micro;L.</li>
+          <li>Designed a point-of-care-compatible electronic readout system as an alternative to optical detection.</li>
+          <li>Led CRISPR-RPA assay optimization, nanopore readout integration, and specificity testing.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="when">Feb 2021 &ndash; Feb 2022 &middot; Konkuk University, South Korea</div>
+        <h3>Autonomous Droplet Concentration Gradient Generator</h3>
+        <ul>
+          <li>Designed an autonomous microfluidic oscillator to control pressures from 0.31 to 237 Pa.</li>
+          <li>Achieved dynamic concentration gradients over a 10<sup>4</sup>-fold range using a DNA-mediated homogeneous FRET binding assay.</li>
+          <li>Led device design, droplet-generation experiments, and pressure-control characterization.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="when">Feb 2020 &ndash; Feb 2021 &middot; Konkuk University, South Korea</div>
+        <h3>Autonomous Plasma Extraction from Whole Blood</h3>
+        <ul>
+          <li>Developed a passive plasma extraction device using constant-flow oscillation and droplet-generation principles for PCR-compatible sample preparation.</li>
+          <li>Contributed to device design, flow-control experiments, and plasma separation workflow development.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Translational Research &amp; Innovation</h2>
+    <ul>
+      <li>Translated benchtop nucleic-acid assays into portable, sample-to-answer point-of-care systems integrating compact fluorescence detection and rapid nucleic-acid extraction.</li>
+      <li>Advanced a portable nanopore device toward real-time bio-assay detection with online positive/negative calling and multi-channel readout.</li>
+      <li>Built embedded readout and device integration on an NVIDIA Jetson Orin edge platform with Python-based APIs for real-time data acquisition and PC-to-hardware control.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title">Media Coverage</h2>
+    <p>"Faster monkeypox (mpox) testing through CRISPR" &mdash; covered by AAAS and EurekAlert!, Medical Xpress, Newswise, BPS Newsroom, and BioTechniques.</p>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div>&copy; 2026 Md. Ahasan Ahamed</div>
+    <div>Bloomington, IN &middot; <a href="mailto:mja6561@psu.edu">mja6561@psu.edu</a></div>
+  </div>
+</footer>
+<script>
+// mobile nav toggle
+document.addEventListener('DOMContentLoaded',function(){
+  var t=document.querySelector('.nav-toggle');
+  var l=document.querySelector('.nav-links');
+  if(t&&l){t.addEventListener('click',function(){l.classList.toggle('open');});}
+});
+
+</script>
+</body>
+</html>
