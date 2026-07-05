@@ -161,6 +161,15 @@ footer a{color:#9ed4e6}
 hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
 @media (max-width:760px){.proj,.proj.rev{grid-template-columns:1fr}.proj.rev .fig{order:0}}
 
+/* --- pub thumbnails --- */
+.pub-thumb{float:right;width:118px;height:auto;margin:2px 0 8px 16px;border:1px solid var(--line);border-radius:6px;background:#fff}
+@media (max-width:520px){.pub-thumb{float:none;display:block;width:100%;max-width:220px;margin:8px 0}}
+
+/* --- featured video --- */
+.video-feature{margin:0 0 10px}
+.video-feature video{width:100%;max-height:460px;background:#000;border-radius:10px;border:1px solid var(--line);display:block}
+.video-feature .cap{font-size:.85rem;color:var(--muted);margin-top:8px;text-align:center}
+
 </style>
 </head>
 <body>
@@ -200,9 +209,17 @@ hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
 <main>
 <div class="container">
 
+  <section class="video-feature">
+    <video controls preload="metadata" playsinline poster="https://wguanlab.github.io/assets/img/publication_preview/ahamed_multiplexed_2025.jpeg">
+      <source src="https://pubs.acs.org/doi/suppl/10.1021/acssensors.5c01275/suppl_file/se5c01275_si_002.mp4" type="video/mp4">
+      Your browser cannot play this video. <a href="https://pubs.acs.org/doi/suppl/10.1021/acssensors.5c01275/suppl_file/se5c01275_si_002.mp4" target="_blank" rel="noopener">Open the video</a>.
+    </video>
+    <p class="cap">Featured: portable salivary miRNA point-of-care platform (<em>ACS Sensors</em>, 2025).</p>
+  </section>
+
   <section>
     <h2 class="section-title">About</h2>
-    <p class="lead">I am a Ph.D. candidate in Electrical Engineering at The Pennsylvania State University (expected August 2026), advised by Prof. Weihua Guan. My research integrates engineering, biology, and medicine to build accessible point-of-care diagnostic devices. I focus on single-molecule nanopore sensing coupled with isothermal amplification (RPA, LAMP, CRISPR) and machine-learning-driven signal analysis for the rapid detection of infectious and neurodegenerative diseases.</p>
+    <p class="lead">I am a Ph.D. candidate in Electrical Engineering at The Pennsylvania State University, advised by Prof. Weihua Guan. My research integrates engineering, biology, and medicine to build accessible point-of-care diagnostic devices. I focus on single-molecule nanopore sensing coupled with isothermal amplification (RPA, LAMP, CRISPR) and machine-learning-driven signal analysis for the rapid detection of infectious and neurodegenerative diseases.</p>
     <p>My work spans the full development pipeline, from assay chemistry and microfluidic chip fabrication to embedded readout electronics and edge-computing integration. I have translated benchtop nucleic-acid assays into portable, sample-to-answer platforms targeting SARS-CoV-2, HIV, Mpox, and Alzheimer disease. I also helped establish and operationalize the Guan Lab at Indiana University, where I currently serve as a Visiting Scholar.</p>
     <div class="mission">
       <strong>Focus:</strong> Democratizing accessible, affordable, and accurate diagnosis through single-molecule sensing, microfluidics, and intelligent data analytics.
@@ -238,11 +255,11 @@ hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
   <section>
     <h2 class="section-title">Highlights</h2>
     <ul>
-      <li>Contributed project concept, preliminary data, and proposal writing to <strong>NSF ECCS Award #2603909</strong> ($494K, 2026&ndash;2029).</li>
-      <li>Lead writer on the SIMPLE-AD and TTP-P HIV proposals for point-of-care Alzheimer and HIV diagnostics.</li>
-      <li>Designed a point-of-care COVID-19 detection platform with a 42-minute turnaround and a CRISPR-based nanopore assay with 100% specificity.</li>
-      <li>6+ years of teaching and mentoring experience across undergraduate, M.S., and junior Ph.D. students.</li>
-      <li>Research featured by AAAS/EurekAlert!, Medical Xpress, Newswise, and BioTechniques.</li>
+      <li>Ph.D. candidate in Electrical Engineering, Penn State; research focus on single-molecule nanopore sensing and point-of-care device fabrication, with expertise in isothermal amplification (RPA, LAMP, CRISPR), reaction kinetics, biophysics, and ML-driven signal analysis.</li>
+      <li><strong>20+</strong> peer-reviewed publications (8 first/co-first author, 4 second author) in <em>ACS Sensors</em>, <em>Analytical Chemistry</em>, <em>Analytical Chimica Acta</em>, and <em>Biosensors &amp; Bioelectronics</em>; <strong>254 citations</strong>, h-index <strong>8</strong> (Google Scholar).</li>
+      <li>Disease areas: Alzheimer disease, HIV, Mpox, and SARS-CoV-2; developed multiplex detection assays and early-stage biomarker prediction workflows.</li>
+      <li>Contributed to NSF ECCS Award #2603909 ($494K, 2026&ndash;2029) and NIH proposal preparation; established and operationalized the Guan Lab at Indiana University, including instrument procurement, qualification, and in-house maintenance.</li>
+      <li><strong>6+</strong> years of teaching and mentoring experience (Teaching Assistant, Guest Lecturer); mentored undergraduate, M.S., and junior Ph.D. students.</li>
     </ul>
     <p style="margin-top:22px"><a class="btn" href="publications.html">View publications</a> &nbsp; <a class="btn ghost" href="research.html">Explore research</a></p>
   </section>
