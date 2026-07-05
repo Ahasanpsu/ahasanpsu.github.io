@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" role="img" aria-labelledby="title desc">
+  <title id="title">Autonomous plasma extraction constant-pressure valve schematic</title>
+  <desc id="desc">Schematic showing constant pressure, inflow and outflow pulses, and open and closed valve states.</desc>
+  <rect width="520" height="150" fill="#fff"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#111" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(10 10)">
+      <ellipse cx="42" cy="17" rx="36" ry="11" fill="#f3d64d"/>
+      <rect x="6" y="17" width="72" height="30" fill="#f3d64d"/>
+      <ellipse cx="42" cy="47" rx="36" ry="11" fill="#d9b632"/>
+      <text x="88" y="22">Const.</text>
+      <text x="88" y="42">pressure</text>
+    </g>
+    <g transform="translate(8 82)">
+      <text x="0" y="-6">inflow</text>
+      <line x1="0" y1="32" x2="72" y2="32"/>
+      <path d="M0 32 L0 8 L8 8 L8 32 M22 32 L22 28 L30 28 L30 32 M44 32 L44 30 L52 30 L52 32"/>
+      <text x="18" y="55">time</text>
+    </g>
+    <g transform="translate(160 50)">
+      <rect x="0" y="22" width="100" height="62" fill="#d9b632" opacity=".85"/>
+      <rect x="33" y="0" width="36" height="84" fill="#c49d23" opacity=".95"/>
+      <rect x="73" y="30" width="32" height="20" fill="#fff"/>
+      <text x="19" y="18">K</text>
+      <text x="76" y="24">Valve</text>
+      <text x="105" y="38">K'</text>
+      <path d="M-44 53 H0"/>
+      <path d="M100 53 H146"/>
+      <path d="M51 0 V84"/>
+    </g>
+    <g transform="translate(315 82)">
+      <text x="0" y="-6">outflow</text>
+      <line x1="0" y1="32" x2="72" y2="32"/>
+      <path d="M0 32 L0 30 L8 30 L8 32 M22 32 L22 10 L30 10 L30 32 M44 32 L44 30 L52 30 L52 32 M64 32 L64 12 L72 12 L72 32"/>
+      <text x="18" y="55">time</text>
+    </g>
+    <g transform="translate(407 4)">
+      <text x="12" y="18">K</text>
+      <text x="83" y="18">K'</text>
+      <text x="48" y="18">open</text>
+      <rect x="15" y="31" width="90" height="34" fill="#f3d64d"/>
+      <path d="M18 31 H102 V50 Q60 72 18 50 Z" fill="#fff"/>
+      <path d="M15 31 H105 M15 65 H105"/>
+      <path d="M6 83 C21 99 39 101 54 88" fill="none"/>
+      <path d="M66 88 C82 101 100 98 114 83" fill="none"/>
+      <path d="M10 84 l-7 -2 l2 7"/>
+      <path d="M111 84 l7 -2 l-2 7"/>
+      <text x="47" y="108">close</text>
+      <rect x="15" y="116" width="90" height="22" fill="#f3d64d"/>
+      <path d="M15 116 H105 M15 138 H105"/>
+      <rect x="34" y="116" width="52" height="22" fill="#fff"/>
+    </g>
+  </g>
+</svg>
