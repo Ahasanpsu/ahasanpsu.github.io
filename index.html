@@ -170,6 +170,16 @@ hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
 .video-feature video{width:100%;max-height:460px;background:#000;border-radius:10px;border:1px solid var(--line);display:block}
 .video-feature .cap{font-size:.85rem;color:var(--muted);margin-top:8px;text-align:center}
 
+/* --- video poster link --- */
+.video-link{position:relative;display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
+.video-link img{width:100%;max-height:460px;object-fit:cover;display:block;opacity:.9}
+.video-link .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:76px;height:76px;border-radius:50%;background:rgba(11,110,143,.92);display:flex;align-items:center;justify-content:center}
+.video-link .play::after{content:"";border-style:solid;border-width:16px 0 16px 26px;border-color:transparent transparent transparent #fff;margin-left:6px}
+.video-link:hover .play{background:rgba(9,91,118,.98)}
+.video-link .ov{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;color:#fff;font-size:.9rem;
+  background:linear-gradient(transparent,rgba(0,0,0,.7))}
+
 </style>
 </head>
 <body>
@@ -210,11 +220,11 @@ hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
 <div class="container">
 
   <section class="video-feature">
-    <video controls preload="metadata" playsinline poster="https://wguanlab.github.io/assets/img/publication_preview/ahamed_multiplexed_2025.jpeg">
-      <source src="https://pubs.acs.org/doi/suppl/10.1021/acssensors.5c01275/suppl_file/se5c01275_si_002.mp4" type="video/mp4">
-      Your browser cannot play this video. <a href="https://pubs.acs.org/doi/suppl/10.1021/acssensors.5c01275/suppl_file/se5c01275_si_002.mp4" target="_blank" rel="noopener">Open the video</a>.
-    </video>
-    <p class="cap">Featured: portable salivary miRNA point-of-care platform (<em>ACS Sensors</em>, 2025).</p>
+    <a class="video-link" href="https://pubs.acs.org/doi/suppl/10.1021/acssensors.5c01275/suppl_file/se5c01275_si_002.mp4" target="_blank" rel="noopener" aria-label="Play demonstration video">
+      <img src="https://wguanlab.github.io/assets/img/publication_preview/ahamed_multiplexed_2025.jpeg" alt="Portable salivary miRNA point-of-care platform">
+      <span class="play"></span>
+      <span class="ov">Watch: portable salivary miRNA point-of-care platform (<em>ACS Sensors</em>, 2025)</span>
+    </a>
   </section>
 
   <section>
