@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 190" role="img" aria-labelledby="title desc">
+  <title id="title">DNA nanomaterial platform for exosomal miRNA detection</title>
+  <desc id="desc">Graphical schematic showing exosomes, miRNA release, DNA nanostructures, and fluorescent sensing.</desc>
+  <rect width="320" height="190" fill="#f8fbff"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#12233b">
+    <text x="16" y="25" font-size="16" font-weight="700">Exosomal miRNA detection</text>
+    <text x="16" y="44" font-size="12">DNA nanomaterial sensing platform</text>
+  </g>
+  <g transform="translate(28 72)">
+    <circle cx="38" cy="38" r="34" fill="#dff5fb" stroke="#0b6e8f" stroke-width="2"/>
+    <circle cx="23" cy="30" r="5" fill="#12a1c9"/>
+    <circle cx="51" cy="44" r="6" fill="#12a1c9"/>
+    <circle cx="44" cy="24" r="4" fill="#12a1c9"/>
+    <text x="12" y="88" font-family="Arial" font-size="12" fill="#5b6b7b">exosome</text>
+  </g>
+  <path d="M108 111 H148" stroke="#0b6e8f" stroke-width="3" marker-end="url(#arrow)"/>
+  <g transform="translate(158 76)" stroke="#8b5cf6" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M0 34 C12 18, 24 50, 36 34 S60 18, 72 34"/>
+    <path d="M7 12 C19 -2, 31 26, 43 12 S67 -2, 79 12"/>
+    <text x="10" y="78" font-family="Arial" font-size="12" fill="#5b6b7b" stroke="none">miRNA targets</text>
+  </g>
+  <g transform="translate(248 62)" fill="none" stroke="#d24b4b" stroke-width="3">
+    <path d="M30 0 L60 52 H0 Z"/>
+    <path d="M30 0 V52 M0 52 H60"/>
+    <circle cx="30" cy="32" r="8" fill="#12a1c9" stroke="none"/>
+    <text x="-8" y="88" font-family="Arial" font-size="12" fill="#5b6b7b" stroke="none">signal</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#0b6e8f"/>
+    </marker>
+  </defs>
+</svg>

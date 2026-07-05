@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 190" role="img" aria-labelledby="title desc">
+  <title id="title">LAMP-coupled solid-state nanopore point-of-care testing</title>
+  <desc id="desc">Graphical schematic of LAMP amplification entering a nanopore while buffer, size, and clogging are controlled.</desc>
+  <rect width="320" height="190" fill="#f6fbfb"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#12233b">
+    <text x="16" y="26" font-size="17" font-weight="700">LAMP + nanopore</text>
+    <text x="16" y="45" font-size="12">buffer, size, and clogging control</text>
+  </g>
+  <g transform="translate(26 74)">
+    <rect x="0" y="0" width="78" height="48" rx="8" fill="#fff" stroke="#d6e2ea"/>
+    <path d="M14 29 C24 8, 37 50, 50 28 S68 8, 72 29" fill="none" stroke="#12a1c9" stroke-width="3"/>
+    <text x="16" y="67" font-family="Arial" font-size="12" fill="#5b6b7b">LAMP products</text>
+  </g>
+  <path d="M118 98 H164" stroke="#0b6e8f" stroke-width="3" marker-end="url(#arrow)"/>
+  <g transform="translate(178 56)">
+    <rect x="0" y="0" width="54" height="92" rx="7" fill="#1f2933"/>
+    <rect x="19" y="0" width="16" height="92" fill="#fff"/>
+    <circle cx="27" cy="46" r="9" fill="#12a1c9"/>
+    <text x="-4" y="113" font-family="Arial" font-size="12" fill="#5b6b7b">solid-state pore</text>
+  </g>
+  <g transform="translate(252 68)" font-family="Arial" font-size="12">
+    <rect x="0" y="0" width="50" height="58" rx="5" fill="#fff" stroke="#d6e2ea"/>
+    <path d="M6 32 H12 L15 16 L19 48 L23 22 L28 37 H44" fill="none" stroke="#d24b4b" stroke-width="2"/>
+    <text x="-2" y="78" fill="#5b6b7b">POC readout</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#0b6e8f"/>
+    </marker>
+  </defs>
+</svg>

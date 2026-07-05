@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 190" role="img" aria-labelledby="title desc">
+  <title id="title">Microfluidic hydraulic oscillators review</title>
+  <desc id="desc">Graphical abstract showing oscillatory pressure driving biochemical and biomedical microfluidic workflows.</desc>
+  <rect width="320" height="190" fill="#fbfcff"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#12233b">
+    <text x="16" y="24" font-size="16" font-weight="700">Microfluidic hydraulic</text>
+    <text x="16" y="43" font-size="16" font-weight="700">oscillators</text>
+  </g>
+  <g transform="translate(20 70)" stroke="#0b6e8f" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M0 35 C25 0, 50 70, 75 35 S125 0, 150 35 S200 70, 225 35"/>
+  </g>
+  <g transform="translate(42 116)" fill="#12a1c9" opacity=".85">
+    <circle cx="0" cy="0" r="9"/>
+    <circle cx="42" cy="-12" r="6"/>
+    <circle cx="82" cy="6" r="8"/>
+    <circle cx="132" cy="-10" r="7"/>
+    <circle cx="184" cy="4" r="9"/>
+  </g>
+  <g fill="none" stroke="#334155" stroke-width="2">
+    <rect x="226" y="54" width="58" height="32" rx="5"/>
+    <rect x="226" y="105" width="58" height="32" rx="5"/>
+    <path d="M255 86 V105"/>
+  </g>
+  <g font-family="Arial" font-size="12" fill="#5b6b7b">
+    <text x="231" y="74">assay</text>
+    <text x="235" y="125">device</text>
+    <text x="34" y="168">pressure-programmed droplets and lab-on-chip control</text>
+  </g>
+</svg>
