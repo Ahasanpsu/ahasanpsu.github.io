@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Publications | Md. Ahasan Ahamed</title>
-<meta name="description" content="Peer-reviewed publications, review articles, and conference presentations by Md. Ahasan Ahamed.">
+<meta name="description" content="Peer-reviewed publications, reviews, and conference presentations by Md. Ahasan Ahamed.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -140,6 +140,26 @@ footer a{color:#9ed4e6}
   .contact-grid{grid-template-columns:1fr}
 }
 
+/* --- Revision additions --- */
+.scholar-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;background:var(--bg-soft);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 20px;margin:0 0 30px}
+.scholar-cta .txt{flex:1;min-width:220px;color:var(--navy)}
+.pub-year{font-size:1.05rem;color:var(--accent);font-weight:700;margin:26px 0 4px;
+  padding-bottom:4px;border-bottom:1px solid var(--line)}
+.proj{display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:start;margin-bottom:34px}
+.proj.rev{grid-template-columns:1fr 260px}
+.proj.rev .fig{order:2}
+.fig{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg-soft)}
+.fig img{display:block;width:100%;height:auto}
+.fig .cap{font-size:.78rem;color:var(--muted);padding:8px 10px;border-top:1px solid var(--line)}
+.fig-ph{display:flex;align-items:center;justify-content:center;text-align:center;min-height:170px;
+  color:var(--muted);font-size:.85rem;padding:16px;background:repeating-linear-gradient(45deg,#f2f6fa,#f2f6fa 10px,#eef3f8 10px,#eef3f8 20px)}
+.proj h3{margin-top:0}
+.course{margin:0 0 6px}
+.course-role{color:var(--muted);font-size:.9rem;margin:0 0 10px}
+hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
+@media (max-width:760px){.proj,.proj.rev{grid-template-columns:1fr}.proj.rev .fig{order:0}}
+
 </style>
 </head>
 <body>
@@ -151,7 +171,7 @@ footer a{color:#9ed4e6}
       <li><a href="index.html">About</a></li>
       <li><a href="publications.html" class="active">Publications</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="cv.html">CV</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -160,209 +180,130 @@ footer a{color:#9ed4e6}
 <main>
 <div class="container">
   <h1 class="page-title">Publications</h1>
-  <p class="page-sub">20+ peer-reviewed articles &middot; 254 citations &middot; h-index 8 (Google Scholar). <span style="color:var(--navy);font-weight:600">Bold</span> indicates the author; <sup>&#42;</sup> denotes corresponding author.</p>
+  <p class="page-sub">Peer-reviewed articles listed in reverse chronological order. <span style="color:var(--navy);font-weight:600">Bold</span> indicates the author; <sup>&#42;</sup> denotes corresponding author.</p>
+
+  <div class="scholar-cta">
+    <div class="txt"><strong>Always current:</strong> the complete and continuously updated list, including citation counts and h-index, is maintained on Google Scholar.</div>
+    <a class="btn" href="https://scholar.google.com/citations?user=elt2-ZsAAAAJ&hl=en" target="_blank" rel="noopener">View Google Scholar profile</a>
+  </div>
 
   <div class="stats">
-    <div class="stat"><div class="num">8</div><div class="lbl">First / co-first author</div></div>
-    <div class="stat"><div class="num">7</div><div class="lbl">Co-author articles</div></div>
-    <div class="stat"><div class="num">6</div><div class="lbl">Review articles</div></div>
+    <div class="stat"><div class="num">20+</div><div class="lbl">Peer-reviewed articles</div></div>
+    <div class="stat"><div class="num">254</div><div class="lbl">Citations</div></div>
+    <div class="stat"><div class="num">8</div><div class="lbl">h-index</div></div>
     <div class="stat"><div class="num">9</div><div class="lbl">Conference talks/posters</div></div>
   </div>
 
-  <div class="pub-group">
-    <h2 class="section-title">First / Co-First Author Research Articles</h2>
-    <ul class="pub-list">
-      <li class="pub"><div class="idx">1</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Khalid MAU, Guo B, Kshirsagar A, &amp; Guan W<sup>&#42;</sup>.</div>
-        Fully integrated solid-state nanopore analysis for real-time amplification-reaction-coupled molecular counting.
-        <div class="meta"><span class="badge review">Under review</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">2</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Khalid MAU, Politza AJ, Zaman WU, &amp; Guan W<sup>&#42;</sup>.</div>
-        Electronic multiplexed RPA amplicons profiling via probe-free nanopore sensing and deep learning classification. <span class="venue">J. Am. Chem. Soc.</span>
-        <div class="meta"><span class="badge review">Under review</span><span class="badge doi"><a href="https://doi.org/10.1101/2025.04.24.650542" target="_blank" rel="noopener">bioRxiv</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">3</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Zhang Z, Kshirsagar A, Politza AJ, Sethuraman U, Suresh S, Hicks S, Guo F, &amp; Guan W<sup>&#42;</sup>.</div>
-        Multiplexed salivary miRNA quantification for predicting severe COVID-19 symptoms in children using ligation-RPA amplification assay. <span class="venue">ACS Sens.</span>
-        <div class="meta"><span class="badge date">Jul 2025</span><span class="badge doi"><a href="https://doi.org/10.1021/acssensors.5c01275" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">4</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Khalid MAU, Dong M, Politza AJ, Zhang Z, Kshirsagar A, Liu T, &amp; Guan W<sup>&#42;</sup>.</div>
-        Sensitive and specific CRISPR-Cas12a assisted nanopore with RPA for Monkeypox detection. <span class="venue">Biosens. Bioelectron.</span> 246, 115866.
-        <div class="meta"><span class="badge date">Feb 2024</span><span class="badge doi"><a href="https://doi.org/10.1016/j.bios.2023.115866" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">5</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Kim G, Li Z, &amp; Kim SJ<sup>&#42;</sup>.</div>
-        Pre-programmed microdroplet generator to control wide-ranging chemical concentrations. <span class="venue">Anal. Chim. Acta</span> 1236, 340587.
-        <div class="meta"><span class="badge date">Dec 2022</span><span class="badge doi"><a href="https://doi.org/10.1016/j.aca.2022.340587" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-    </ul>
-  </div>
+  <h2 class="section-title">Journal Articles &amp; Reviews</h2>
 
-  <div class="pub-group">
-    <h2 class="section-title">Co-Author Research Articles</h2>
-    <ul class="pub-list">
-      <li class="pub"><div class="idx">6</div><div class="body">
-        <div class="authors">Guo B, <span class="me">Ahamed MA</span>, Khalid MAU, Kshirsagar A, Pal T, &amp; Guan W<sup>&#42;</sup>.</div>
-        Calibration-free multiplexed detection of Alzheimer's disease biomarkers by direct readout on a programmed DNA carrier-enabled glass nanopore platform. <span class="venue">Nat. Commun.</span>
-        <div class="meta"><span class="badge review">Under review</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">7</div><div class="body">
-        <div class="authors">Khalid MAU, Pal T, <span class="me">Ahamed MA</span>, Guo B, &amp; Guan W<sup>&#42;</sup>.</div>
-        A figure of merit for comparing plasmonic PCR systems. <span class="venue">ACS Sens.</span>
-        <div class="meta"><span class="badge review">Under review</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">8</div><div class="body">
-        <div class="authors">Kshirsagar A, Politza AJ, Liu T, <span class="me">Ahamed MA</span>, Dong M, Khalid MAU, &amp; Guan W<sup>&#42;</sup>.</div>
-        ViraLite: an ultracompact HIV viral load self-testing system with internal quality control. <span class="venue">Microsyst. Nanoeng.</span>
-        <div class="meta"><span class="badge date">Accepted 2026</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">9</div><div class="body">
-        <div class="authors">Liu T, Politza AJ, Kshirsagar A, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>.</div>
-        Rapid simultaneous self-testing of HIV and HCV viral loads with integrated RNA extraction and multiplex RT-PCR in under 1 hour. <span class="venue">Biosens. Bioelectron.</span>
-        <div class="meta"><span class="badge date">Aug 2025</span><span class="badge doi"><a href="https://doi.org/10.1016/j.bios.2025.117843" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">10</div><div class="body">
-        <div class="authors">Khalid MAU, <span class="me">Ahamed MA</span>, Politza AJ, &amp; Guan W<sup>&#42;</sup>.</div>
-        Solid-state nanopore sizing for cfDNA sample quality control in point-of-need sequencing. <span class="venue">ACS Sens.</span>
-        <div class="meta"><span class="badge date">Jun 2025</span><span class="badge doi"><a href="https://doi.org/10.1021/acssensors.5c00803" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">11</div><div class="body">
-        <div class="authors">Dong M, Kshirsagar A, Politza AJ, Khalid MAU, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>.</div>
-        Addressing buffer, size, and clogging challenges in LAMP-coupled solid-state nanopores for point-of-care testing. <span class="venue">Anal. Chem.</span>
-        <div class="meta"><span class="badge date">Mar 2025</span><span class="badge doi"><a href="https://doi.org/10.1021/acs.analchem.4c06823" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">12</div><div class="body">
-        <div class="authors">Liu T, Politza AJ, <span class="me">Ahamed MA</span>, Kshirsagar A, Zhu Y, &amp; Guan W<sup>&#42;</sup>.</div>
-        Compact multiplex PCR device for HIV-1 and HIV-2 viral load determination from finger-prick whole blood in resource-limited settings. <span class="venue">Biosens. Bioelectron.</span> 271, 116997.
-        <div class="meta"><span class="badge date">Mar 2025</span><span class="badge doi"><a href="https://doi.org/10.1016/j.bios.2024.116997" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">13</div><div class="body">
-        <div class="authors">Khalid MAU, <span class="me">Ahamed MA</span>, Dong M, Kshirsagar A, &amp; Guan W<sup>&#42;</sup>.</div>
-        Hydrogel interfaced glass nanopore for high-resolution sizing of short DNA fragments. <span class="venue">Biosens. Bioelectron.</span>
-        <div class="meta"><span class="badge date">Jan 2025</span><span class="badge doi"><a href="https://doi.org/10.1016/j.bios.2024.116895" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">14</div><div class="body">
-        <div class="authors">Politza AJ, Liu T, Kshirsagar A, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>.</div>
-        Development and validation of a portable device for lab-free versatile nucleic acid extraction. <span class="venue">BioTechniques</span> 1&ndash;11.
-        <div class="meta"><span class="badge date">Dec 2024</span><span class="badge doi"><a href="https://doi.org/10.1080/07366205.2024.2427544" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">15</div><div class="body">
-        <div class="authors">Politza AJ, Liu T, Kshirsagar A, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>.</div>
-        A portable centrifuge for universal nucleic acid extraction at the point-of-care. <span class="venue">SSRN</span>.
-        <div class="meta"><span class="badge date">Apr 2024</span><span class="badge doi"><a href="https://doi.org/10.2139/ssrn.4781228" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-    </ul>
-  </div>
+  <div class="pub-year">Under Review / In Preparation</div>
+  <ul class="pub-list">
+    <li class="pub"><div class="idx">&bull;</div><div class="body">
+      <span class="me">Ahamed MA</span>, Khalid MAU, Guo B, Kshirsagar A, &amp; Guan W<sup>&#42;</sup>. Fully integrated solid-state nanopore analysis for real-time amplification-reaction-coupled molecular counting. <span class="venue">(under review)</span>
+    </div></li>
+    <li class="pub"><div class="idx">&bull;</div><div class="body">
+      <span class="me">Ahamed MA</span>, Khalid MAU, Politza AJ, Zaman WU, &amp; Guan W<sup>&#42;</sup>. Electronic multiplexed RPA amplicons profiling via probe-free nanopore sensing and deep learning classification. <span class="venue">J. Am. Chem. Soc.</span> (under review). <a href="https://doi.org/10.1101/2025.04.24.650542" target="_blank" rel="noopener">bioRxiv</a>
+    </div></li>
+    <li class="pub"><div class="idx">&bull;</div><div class="body">
+      Guo B, <span class="me">Ahamed MA</span>, Khalid MAU, Kshirsagar A, Pal T, &amp; Guan W<sup>&#42;</sup>. Calibration-free multiplexed detection of Alzheimer's disease biomarkers by direct readout on a programmed DNA carrier-enabled glass nanopore platform. <span class="venue">Nat. Commun.</span> (under review)
+    </div></li>
+    <li class="pub"><div class="idx">&bull;</div><div class="body">
+      Khalid MAU, Pal T, <span class="me">Ahamed MA</span>, Guo B, &amp; Guan W<sup>&#42;</sup>. A figure of merit for comparing plasmonic PCR systems. <span class="venue">ACS Sens.</span> (under review)
+    </div></li>
+  </ul>
 
-  <div class="pub-group">
-    <h2 class="section-title">Review Articles</h2>
-    <ul class="pub-list">
-      <li class="pub"><div class="idx">16</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Guo B, Khalid MAU, Pal T, Guo F, &amp; Guan W<sup>&#42;</sup>.</div>
-        Point-of-care testing for early diagnosis and population screening of Alzheimer's disease: recent advances and perspectives. <span class="venue">Nano Today</span> 69, 103033.
-        <div class="meta"><span class="badge date">Mar 2026</span><span class="badge doi"><a href="https://doi.org/10.1016/j.nantod.2026.103033" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">17</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Hasan M, Kabir ME, &amp; Zhang Z.</div>
-        Microfluidic hydraulic oscillators: a comprehensive review of emerging biochemical and biomedical applications. <span class="venue">Anal. Chim. Acta</span> 343793.
-        <div class="meta"><span class="badge date">May 2025</span><span class="badge doi"><a href="https://doi.org/10.1016/j.aca.2025.343793" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">18</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span> &amp; Guan W<sup>&#42;</sup>.</div>
-        Opportunities and challenges in implementing CRISPR-based point-of-care testing for Monkeypox detection. <span class="venue">BioTechniques</span>.
-        <div class="meta"><span class="badge date">Apr 2025</span><span class="badge doi"><a href="https://doi.org/10.1080/07366205.2025.2473827" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">19</div><div class="body">
-        <div class="authors">Zhang Z, <span class="me">Ahamed MA</span>, &amp; Yang D<sup>&#42;</sup>.</div>
-        DNA nanomaterial-based sensing platform for exosomal miRNA detection in disease diagnosis. <span class="venue">Sens. Diagn.</span>
-        <div class="meta"><span class="badge date">Feb 2025</span><span class="badge doi"><a href="https://doi.org/10.1039/D4SD00373J" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">20</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Politza AJ, Liu T, Khalid MAU, Zhang H, &amp; Guan W<sup>&#42;</sup>.</div>
-        CRISPR-based strategies for sample-to-answer Monkeypox detection: current status and emerging opportunities. <span class="venue">Nanotechnology</span> 36, 042001.
-        <div class="meta"><span class="badge date">Nov 2024</span><span class="badge doi"><a href="https://doi.org/10.1088/1361-6528/ad892b" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">21</div><div class="body">
-        <div class="authors">Zhang Z, Liu T, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>.</div>
-        Sample-to-answer salivary miRNA testing: new frontiers in point-of-care diagnostic technologies. <span class="venue">WIREs Nanomed. Nanobiotechnol.</span> 16(3), e1969.
-        <div class="meta"><span class="badge date">May 2024</span><span class="badge doi"><a href="https://doi.org/10.1002/wnan.1969" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-    </ul>
-  </div>
+  <div class="pub-year">2026</div>
+  <ul class="pub-list">
+    <li class="pub"><div class="idx">22</div><div class="body">
+      <span class="me">Ahamed MA</span>, Guo B, Khalid MAU, Pal T, Guo F, &amp; Guan W<sup>&#42;</sup>. Point-of-care testing for early diagnosis and population screening of Alzheimer's disease: recent advances and perspectives. <a class="venue" href="https://doi.org/10.1016/j.nantod.2026.103033" target="_blank" rel="noopener">Nano Today, 69, 103033 (2026)</a>
+    </div></li>
+    <li class="pub"><div class="idx">21</div><div class="body">
+      Kshirsagar A, Politza AJ, Liu T, <span class="me">Ahamed MA</span>, Dong M, Khalid MAU, &amp; Guan W<sup>&#42;</sup>. ViraLite: an ultracompact HIV viral load self-testing system with internal quality control. <span class="venue">Microsyst. Nanoeng.</span> (accepted, 2026)
+    </div></li>
+  </ul>
 
-  <div class="pub-group">
-    <h2 class="section-title">Other Publications</h2>
-    <ul class="pub-list">
-      <li class="pub"><div class="idx">22</div><div class="body">
-        <div class="authors">Syduzzaman Md<sup>&#42;</sup>, Akter M, Mahmud F, Bhowmick DR, Maliha AS, Hossain T, &amp; <span class="me">Ahamed MA</span>.</div>
-        Tensile properties of banana fiber reinforced recycled high-density polyethylene composites: an experimental investigation. <span class="venue">SPE Polym.</span> 5(3), 306&ndash;317.
-        <div class="meta"><span class="badge date">Feb 2024</span><span class="badge doi"><a href="https://doi.org/10.1002/pls2.10125" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">23</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Reza MI, &amp; Al-Amin Md.</div>
-        Electricity generation from speed breaker by air compression method using Wells turbine. <span class="venue">J. Adv. Eng. Comput.</span> 4(2), 140&ndash;148.
-        <div class="meta"><span class="badge date">Jun 2020</span><span class="badge doi"><a href="https://doi.org/10.25073/jaec.202042.277" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-      <li class="pub"><div class="idx">24</div><div class="body">
-        <div class="authors">Rashid MM<sup>&#42;</sup>, Abir N, Kamal SHB, Al-Amin Md, <span class="me">Ahamed MA</span>, Islam MT, &amp; Iqbal I.</div>
-        Functionalized cellulose for textile organic pollutant treatment: a comprehensive review. <span class="venue">Water Conserv. Sci. Eng.</span>
-        <div class="meta"><span class="badge date">Mar 2024</span><span class="badge doi"><a href="https://doi.org/10.1007/s41101-024-00243-1" target="_blank" rel="noopener">DOI</a></span></div>
-      </div></li>
-    </ul>
-  </div>
+  <div class="pub-year">2025</div>
+  <ul class="pub-list">
+    <li class="pub"><div class="idx">20</div><div class="body">
+      <span class="me">Ahamed MA</span>, Zhang Z, Kshirsagar A, Politza AJ, Sethuraman U, Suresh S, Hicks S, Guo F, &amp; Guan W<sup>&#42;</sup>. Multiplexed salivary miRNA quantification for predicting severe COVID-19 symptoms in children using ligation-RPA amplification assay. <a class="venue" href="https://doi.org/10.1021/acssensors.5c01275" target="_blank" rel="noopener">ACS Sens. (2025)</a>
+    </div></li>
+    <li class="pub"><div class="idx">19</div><div class="body">
+      Liu T, Politza AJ, Kshirsagar A, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>. Rapid simultaneous self-testing of HIV and HCV viral loads with integrated RNA extraction and multiplex RT-PCR in under 1 hour. <a class="venue" href="https://doi.org/10.1016/j.bios.2025.117843" target="_blank" rel="noopener">Biosens. Bioelectron. (2025)</a>
+    </div></li>
+    <li class="pub"><div class="idx">18</div><div class="body">
+      Khalid MAU, <span class="me">Ahamed MA</span>, Politza AJ, &amp; Guan W<sup>&#42;</sup>. Solid-state nanopore sizing for cfDNA sample quality control in point-of-need sequencing. <a class="venue" href="https://doi.org/10.1021/acssensors.5c00803" target="_blank" rel="noopener">ACS Sens. (2025)</a>
+    </div></li>
+    <li class="pub"><div class="idx">17</div><div class="body">
+      <span class="me">Ahamed MA</span>, Hasan M, Kabir ME, &amp; Zhang Z. Microfluidic hydraulic oscillators: a comprehensive review of emerging biochemical and biomedical applications. <a class="venue" href="https://doi.org/10.1016/j.aca.2025.343793" target="_blank" rel="noopener">Anal. Chim. Acta, 343793 (2025)</a>
+    </div></li>
+    <li class="pub"><div class="idx">16</div><div class="body">
+      Dong M, Kshirsagar A, Politza AJ, Khalid MAU, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>. Addressing buffer, size, and clogging challenges in LAMP-coupled solid-state nanopores for point-of-care testing. <a class="venue" href="https://doi.org/10.1021/acs.analchem.4c06823" target="_blank" rel="noopener">Anal. Chem. (2025)</a>
+    </div></li>
+    <li class="pub"><div class="idx">15</div><div class="body">
+      Liu T, Politza AJ, <span class="me">Ahamed MA</span>, Kshirsagar A, Zhu Y, &amp; Guan W<sup>&#42;</sup>. Compact multiplex PCR device for HIV-1 and HIV-2 viral load determination from finger-prick whole blood in resource-limited settings. <a class="venue" href="https://doi.org/10.1016/j.bios.2024.116997" target="_blank" rel="noopener">Biosens. Bioelectron. 271, 116997 (2025)</a>
+    </div></li>
+    <li class="pub"><div class="idx">14</div><div class="body">
+      Khalid MAU, <span class="me">Ahamed MA</span>, Dong M, Kshirsagar A, &amp; Guan W<sup>&#42;</sup>. Hydrogel interfaced glass nanopore for high-resolution sizing of short DNA fragments. <a class="venue" href="https://doi.org/10.1016/j.bios.2024.116895" target="_blank" rel="noopener">Biosens. Bioelectron. (2025)</a>
+    </div></li>
+    <li class="pub"><div class="idx">13</div><div class="body">
+      <span class="me">Ahamed MA</span> &amp; Guan W<sup>&#42;</sup>. Opportunities and challenges in implementing CRISPR-based point-of-care testing for Monkeypox detection. <a class="venue" href="https://doi.org/10.1080/07366205.2025.2473827" target="_blank" rel="noopener">BioTechniques (2025)</a>
+    </div></li>
+    <li class="pub"><div class="idx">12</div><div class="body">
+      Zhang Z, <span class="me">Ahamed MA</span>, &amp; Yang D<sup>&#42;</sup>. DNA nanomaterial-based sensing platform for exosomal miRNA detection in disease diagnosis. <a class="venue" href="https://doi.org/10.1039/D4SD00373J" target="_blank" rel="noopener">Sens. Diagn. (2025)</a>
+    </div></li>
+  </ul>
 
-  <div class="pub-group">
-    <h2 class="section-title">Conference Presentations, Posters &amp; Proceedings</h2>
-    <ul class="pub-list">
-      <li class="pub"><div class="idx">O</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Zhang Z, Kshirsagar A, Politza AJ, Sethuraman U, Suresh S, Guo F, &amp; Guan W.</div>
-        Quantitative detection of severe COVID-19 in children via multiplex salivary miRNA profiling using ligation RPA. <span class="venue">BMES</span>. <em>(Oral)</em>
-        <div class="meta"><span class="badge date">Oct 2025</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">O</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span>, Khalid MAU, Politza AJ, Zaman WU, &amp; Guan W.</div>
-        Single-molecule nanopore and deep-learning platform for probe-free multiplex RPA detection. <span class="venue">BMES</span>. <em>(Oral)</em>
-        <div class="meta"><span class="badge date">Oct 2025</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">O</div><div class="body">
-        <div class="authors">Khalid MAU, <span class="me">Ahamed MA</span>, Dong M, Kshirsagar A, &amp; Guan W.</div>
-        Hydrogel-interfaced nanopore system for sub-100 bp sizing and multiplexed virus detection. <span class="venue">BMES</span>. <em>(Oral)</em>
-        <div class="meta"><span class="badge date">Oct 2025</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">O</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span> &amp; Kim SJ.</div>
-        Periodic decrease stepwise waveform generator. <span class="venue">IEEE-NANOMED</span>. <em>(Oral)</em>
-        <div class="meta"><span class="badge date">Oct 2021</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">O</div><div class="body">
-        <div class="authors">Politza AJ, Liu T, Kshirsagar A, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W.</div>
-        Development of a multiplexed LAMP assay for HIV viral load monitoring. <span class="venue">NIH Building Bridges, Bethesda</span>. <em>(Oral)</em>
-        <div class="meta"><span class="badge date">Oct 2024</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">P</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span> &amp; Guan W.</div>
-        CRISPR-assisted solid-state nanopore sensor for rapid point-of-care detection of Monkeypox virus via RPA amplification. <span class="venue">Biophysical Journal</span> 123(S1):145a. <em>(Proceedings)</em>
-        <div class="meta"><span class="badge date">Feb 2024</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">P</div><div class="body">
-        <div class="authors">Liu T, Politza AJ, <span class="me">Ahamed MA</span>, Kshirsagar A, &amp; Guan W.</div>
-        Battery-powered portable multiplexed RT-PCR for HIV-1 and HIV-2 viral load testing at LMIC. <span class="venue">IEEE SENSORS</span>. <em>(Proceedings)</em>
-        <div class="meta"><span class="badge date">Oct 2024</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">P</div><div class="body">
-        <div class="authors">Khalid MAU, <span class="me">Ahamed MA</span>, Politza AJ, &amp; Guan W.</div>
-        Solid-state nanopore sensor for cfDNA sample quality control in point-of-need sequencing. <span class="venue">BMES</span>. <em>(Poster)</em>
-        <div class="meta"><span class="badge date">Oct 2025</span></div>
-      </div></li>
-      <li class="pub"><div class="idx">P</div><div class="body">
-        <div class="authors"><span class="me">Ahamed MA</span> &amp; Kim SJ.</div>
-        Autonomous periodic stepwise pressure generator. <span class="venue">KSME</span>. <em>(Poster)</em>
-        <div class="meta"><span class="badge date">Nov 2021</span></div>
-      </div></li>
-    </ul>
-  </div>
+  <div class="pub-year">2024</div>
+  <ul class="pub-list">
+    <li class="pub"><div class="idx">11</div><div class="body">
+      <span class="me">Ahamed MA</span>, Khalid MAU, Dong M, Politza AJ, Zhang Z, Kshirsagar A, Liu T, &amp; Guan W<sup>&#42;</sup>. Sensitive and specific CRISPR-Cas12a assisted nanopore with RPA for Monkeypox detection. <a class="venue" href="https://doi.org/10.1016/j.bios.2023.115866" target="_blank" rel="noopener">Biosens. Bioelectron. 246, 115866 (2024)</a>
+    </div></li>
+    <li class="pub"><div class="idx">10</div><div class="body">
+      <span class="me">Ahamed MA</span>, Politza AJ, Liu T, Khalid MAU, Zhang H, &amp; Guan W<sup>&#42;</sup>. CRISPR-based strategies for sample-to-answer Monkeypox detection: current status and emerging opportunities. <a class="venue" href="https://doi.org/10.1088/1361-6528/ad892b" target="_blank" rel="noopener">Nanotechnology, 36, 042001 (2024)</a>
+    </div></li>
+    <li class="pub"><div class="idx">9</div><div class="body">
+      Politza AJ, Liu T, Kshirsagar A, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>. Development and validation of a portable device for lab-free versatile nucleic acid extraction. <a class="venue" href="https://doi.org/10.1080/07366205.2024.2427544" target="_blank" rel="noopener">BioTechniques (2024)</a>
+    </div></li>
+    <li class="pub"><div class="idx">8</div><div class="body">
+      Zhang Z, Liu T, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>. Sample-to-answer salivary miRNA testing: new frontiers in point-of-care diagnostic technologies. <a class="venue" href="https://doi.org/10.1002/wnan.1969" target="_blank" rel="noopener">WIREs Nanomed. Nanobiotechnol. 16(3), e1969 (2024)</a>
+    </div></li>
+    <li class="pub"><div class="idx">7</div><div class="body">
+      Politza AJ, Liu T, Kshirsagar A, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W<sup>&#42;</sup>. A portable centrifuge for universal nucleic acid extraction at the point-of-care. <a class="venue" href="https://doi.org/10.2139/ssrn.4781228" target="_blank" rel="noopener">SSRN (2024)</a>
+    </div></li>
+    <li class="pub"><div class="idx">6</div><div class="body">
+      Syduzzaman Md<sup>&#42;</sup>, Akter M, Mahmud F, Bhowmick DR, Maliha AS, Hossain T, &amp; <span class="me">Ahamed MA</span>. Tensile properties of banana fiber reinforced recycled high-density polyethylene composites: an experimental investigation. <a class="venue" href="https://doi.org/10.1002/pls2.10125" target="_blank" rel="noopener">SPE Polym. 5(3), 306&ndash;317 (2024)</a>
+    </div></li>
+    <li class="pub"><div class="idx">5</div><div class="body">
+      Rashid MM<sup>&#42;</sup>, Abir N, Kamal SHB, Al-Amin Md, <span class="me">Ahamed MA</span>, Islam MT, &amp; Iqbal I. Functionalized cellulose for textile organic pollutant treatment: a comprehensive review. <a class="venue" href="https://doi.org/10.1007/s41101-024-00243-1" target="_blank" rel="noopener">Water Conserv. Sci. Eng. (2024)</a>
+    </div></li>
+  </ul>
+
+  <div class="pub-year">2022</div>
+  <ul class="pub-list">
+    <li class="pub"><div class="idx">4</div><div class="body">
+      <span class="me">Ahamed MA</span>, Kim G, Li Z, &amp; Kim SJ<sup>&#42;</sup>. Pre-programmed microdroplet generator to control wide-ranging chemical concentrations. <a class="venue" href="https://doi.org/10.1016/j.aca.2022.340587" target="_blank" rel="noopener">Anal. Chim. Acta, 1236, 340587 (2022)</a>
+    </div></li>
+  </ul>
+
+  <div class="pub-year">2020</div>
+  <ul class="pub-list">
+    <li class="pub"><div class="idx">3</div><div class="body">
+      <span class="me">Ahamed MA</span>, Reza MI, &amp; Al-Amin Md. Electricity generation from speed breaker by air compression method using Wells turbine. <a class="venue" href="https://doi.org/10.25073/jaec.202042.277" target="_blank" rel="noopener">J. Adv. Eng. Comput. 4(2), 140&ndash;148 (2020)</a>
+    </div></li>
+  </ul>
+
+  <h2 class="section-title" style="margin-top:40px">Conference Presentations, Posters &amp; Proceedings</h2>
+  <ul class="pub-list">
+    <li class="pub"><div class="idx">O</div><div class="body"><span class="me">Ahamed MA</span>, Zhang Z, Kshirsagar A, Politza AJ, Sethuraman U, Suresh S, Guo F, &amp; Guan W. Quantitative detection of severe COVID-19 in children via multiplex salivary miRNA profiling using ligation RPA. <span class="venue">BMES</span>, Oct 2025. <em>(Oral)</em></div></li>
+    <li class="pub"><div class="idx">O</div><div class="body"><span class="me">Ahamed MA</span>, Khalid MAU, Politza AJ, Zaman WU, &amp; Guan W. Single-molecule nanopore and deep-learning platform for probe-free multiplex RPA detection. <span class="venue">BMES</span>, Oct 2025. <em>(Oral)</em></div></li>
+    <li class="pub"><div class="idx">O</div><div class="body">Khalid MAU, <span class="me">Ahamed MA</span>, Dong M, Kshirsagar A, &amp; Guan W. Hydrogel-interfaced nanopore system for sub-100 bp sizing and multiplexed virus detection. <span class="venue">BMES</span>, Oct 2025. <em>(Oral)</em></div></li>
+    <li class="pub"><div class="idx">O</div><div class="body"><span class="me">Ahamed MA</span> &amp; Kim SJ. Periodic decrease stepwise waveform generator. <span class="venue">IEEE-NANOMED</span>, Oct 2021. <em>(Oral)</em></div></li>
+    <li class="pub"><div class="idx">O</div><div class="body">Politza AJ, Liu T, Kshirsagar A, Dong M, <span class="me">Ahamed MA</span>, &amp; Guan W. Development of a multiplexed LAMP assay for HIV viral load monitoring. <span class="venue">NIH Building Bridges, Bethesda</span>, Oct 2024. <em>(Oral)</em></div></li>
+    <li class="pub"><div class="idx">P</div><div class="body"><span class="me">Ahamed MA</span> &amp; Guan W. CRISPR-assisted solid-state nanopore sensor for rapid point-of-care detection of Monkeypox virus via RPA amplification. <span class="venue">Biophysical Journal 123(S1):145a</span>, Feb 2024. <em>(Proceedings)</em></div></li>
+    <li class="pub"><div class="idx">P</div><div class="body">Liu T, Politza AJ, <span class="me">Ahamed MA</span>, Kshirsagar A, &amp; Guan W. Battery-powered portable multiplexed RT-PCR for HIV-1 and HIV-2 viral load testing at LMIC. <span class="venue">IEEE SENSORS</span>, Oct 2024. <em>(Proceedings)</em></div></li>
+    <li class="pub"><div class="idx">P</div><div class="body">Khalid MAU, <span class="me">Ahamed MA</span>, Politza AJ, &amp; Guan W. Solid-state nanopore sensor for cfDNA sample quality control in point-of-need sequencing. <span class="venue">BMES</span>, Oct 2025. <em>(Poster)</em></div></li>
+    <li class="pub"><div class="idx">P</div><div class="body"><span class="me">Ahamed MA</span> &amp; Kim SJ. Autonomous periodic stepwise pressure generator. <span class="venue">KSME</span>, Nov 2021. <em>(Poster)</em></div></li>
+  </ul>
 
 </div>
 </main>

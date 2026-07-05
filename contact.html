@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Md. Ahasan Ahamed</title>
-<meta name="description" content="Contact information and professional references for Md. Ahasan Ahamed.">
+<meta name="description" content="Contact information for Md. Ahasan Ahamed.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -140,6 +140,26 @@ footer a{color:#9ed4e6}
   .contact-grid{grid-template-columns:1fr}
 }
 
+/* --- Revision additions --- */
+.scholar-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;background:var(--bg-soft);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 20px;margin:0 0 30px}
+.scholar-cta .txt{flex:1;min-width:220px;color:var(--navy)}
+.pub-year{font-size:1.05rem;color:var(--accent);font-weight:700;margin:26px 0 4px;
+  padding-bottom:4px;border-bottom:1px solid var(--line)}
+.proj{display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:start;margin-bottom:34px}
+.proj.rev{grid-template-columns:1fr 260px}
+.proj.rev .fig{order:2}
+.fig{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg-soft)}
+.fig img{display:block;width:100%;height:auto}
+.fig .cap{font-size:.78rem;color:var(--muted);padding:8px 10px;border-top:1px solid var(--line)}
+.fig-ph{display:flex;align-items:center;justify-content:center;text-align:center;min-height:170px;
+  color:var(--muted);font-size:.85rem;padding:16px;background:repeating-linear-gradient(45deg,#f2f6fa,#f2f6fa 10px,#eef3f8 10px,#eef3f8 20px)}
+.proj h3{margin-top:0}
+.course{margin:0 0 6px}
+.course-role{color:var(--muted);font-size:.9rem;margin:0 0 10px}
+hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
+@media (max-width:760px){.proj,.proj.rev{grid-template-columns:1fr}.proj.rev .fig{order:0}}
+
 </style>
 </head>
 <body>
@@ -151,7 +171,7 @@ footer a{color:#9ed4e6}
       <li><a href="index.html">About</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="cv.html">CV</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </div>
@@ -162,43 +182,18 @@ footer a{color:#9ed4e6}
   <h1 class="page-title">Contact</h1>
   <p class="page-sub">I welcome collaboration, research, and academic opportunities.</p>
 
-  <div class="contact-grid">
-    <section>
-      <h2 class="section-title">Get in Touch</h2>
-      <div class="info-row"><span class="k">Email</span><span><a href="mailto:mja6561@psu.edu">mja6561@psu.edu</a></span></div>
-      <div class="info-row"><span class="k">Phone</span><span>+1 945-214-5328</span></div>
-      <div class="info-row"><span class="k">Location</span><span>Bloomington, Indiana, USA</span></div>
-      <div class="info-row"><span class="k">Status</span><span>U.S. Permanent Resident; authorized to work in the U.S. without sponsorship</span></div>
-      <div class="chips" style="margin-top:16px">
-        <a class="chip" href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="chip" href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a>
-        <a class="chip" href="https://www.researchgate.net/" target="_blank" rel="noopener">ResearchGate</a>
-        <a class="chip" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">References</h2>
-      <div class="ref-card">
-        <div class="name">Weihua Guan, PhD</div>
-        <div class="role">Professor of Intelligent Systems Engineering, Indiana University</div>
-        <div class="role">Research Ph.D. Advisor &amp; Thesis Committee Member &middot; <a href="mailto:guanw@iu.edu">guanw@iu.edu</a></div>
-      </div>
-      <div class="ref-card">
-        <div class="name">Aida Ebrahimi, PhD</div>
-        <div class="role">Associate Professor of Electrical Engineering, Penn State</div>
-        <div class="role">Academic Ph.D. Advisor &amp; Thesis Committee Chair &middot; <a href="mailto:sue66@psu.edu">sue66@psu.edu</a></div>
-      </div>
-      <div class="ref-card">
-        <div class="name">Huanyu (Larry) Cheng, PhD</div>
-        <div class="role">Associate Professor of Engineering Science and Mechanics, Penn State</div>
-        <div class="role">Thesis Committee Member &middot; <a href="mailto:huanyu.cheng@psu.edu">huanyu.cheng@psu.edu</a></div>
-      </div>
-    </section>
-  </div>
-
-  <section style="margin-top:20px">
-    <p><a class="btn" href="Md_Ahasan_Ahamed_CV.pdf" target="_blank">Download CV (PDF)</a></p>
+  <section>
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="info-row"><span class="k">Email</span><span><a href="mailto:mja6561@psu.edu">mja6561@psu.edu</a></span></div>
+    <div class="info-row"><span class="k">Phone</span><span>+1 945-214-5328</span></div>
+    <div class="info-row"><span class="k">Location</span><span>Bloomington, Indiana, USA</span></div>
+    <div class="info-row"><span class="k">Status</span><span>U.S. Permanent Resident; authorized to work in the U.S. without sponsorship</span></div>
+    <div class="chips" style="margin-top:16px">
+      <a class="chip" href="https://scholar.google.com/citations?user=elt2-ZsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="chip" href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a>
+      <a class="chip" href="https://www.researchgate.net/" target="_blank" rel="noopener">ResearchGate</a>
+      <a class="chip" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
   </section>
 
 </div>

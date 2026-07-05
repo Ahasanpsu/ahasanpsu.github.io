@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Md. Ahasan Ahamed | Biosensing &amp; Diagnostics</title>
-<meta name="description" content="Md. Ahasan Ahamed — Ph.D. candidate in Electrical Engineering (Penn State). Research in single-molecule nanopore sensing, point-of-care diagnostics, microfluidics, and biosensing.">
+<meta name="description" content="Md. Ahasan Ahamed — Ph.D. candidate in Electrical Engineering (Penn State). Single-molecule nanopore sensing, point-of-care diagnostics, microfluidics, biosensing.">
 <meta name="author" content="Md. Ahasan Ahamed">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -141,6 +141,26 @@ footer a{color:#9ed4e6}
   .contact-grid{grid-template-columns:1fr}
 }
 
+/* --- Revision additions --- */
+.scholar-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;background:var(--bg-soft);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 20px;margin:0 0 30px}
+.scholar-cta .txt{flex:1;min-width:220px;color:var(--navy)}
+.pub-year{font-size:1.05rem;color:var(--accent);font-weight:700;margin:26px 0 4px;
+  padding-bottom:4px;border-bottom:1px solid var(--line)}
+.proj{display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:start;margin-bottom:34px}
+.proj.rev{grid-template-columns:1fr 260px}
+.proj.rev .fig{order:2}
+.fig{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg-soft)}
+.fig img{display:block;width:100%;height:auto}
+.fig .cap{font-size:.78rem;color:var(--muted);padding:8px 10px;border-top:1px solid var(--line)}
+.fig-ph{display:flex;align-items:center;justify-content:center;text-align:center;min-height:170px;
+  color:var(--muted);font-size:.85rem;padding:16px;background:repeating-linear-gradient(45deg,#f2f6fa,#f2f6fa 10px,#eef3f8 10px,#eef3f8 20px)}
+.proj h3{margin-top:0}
+.course{margin:0 0 6px}
+.course-role{color:var(--muted);font-size:.9rem;margin:0 0 10px}
+hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
+@media (max-width:760px){.proj,.proj.rev{grid-template-columns:1fr}.proj.rev .fig{order:0}}
+
 </style>
 </head>
 <body>
@@ -152,7 +172,7 @@ footer a{color:#9ed4e6}
       <li><a href="index.html" class="active">About</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="cv.html">CV</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -160,13 +180,13 @@ footer a{color:#9ed4e6}
 
 <header class="hero">
   <div class="hero-inner">
-    <div class="avatar">MA</div>
+    <div class="avatar" id="avatar">MA</div>
     <div>
       <h1>Md. Ahasan Ahamed</h1>
       <p class="tagline">Micro/Nano Systems Engineer &middot; Biosensing &amp; Diagnostics &middot; Microfluidics</p>
       <p class="loc">Bloomington, Indiana, USA</p>
       <div class="hero-links">
-        <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://scholar.google.com/citations?user=elt2-ZsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a>
         <a href="https://www.researchgate.net/" target="_blank" rel="noopener">ResearchGate</a>
         <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
@@ -183,7 +203,6 @@ footer a{color:#9ed4e6}
     <h2 class="section-title">About</h2>
     <p class="lead">I am a Ph.D. candidate in Electrical Engineering at The Pennsylvania State University (expected August 2026), advised by Prof. Weihua Guan. My research integrates engineering, biology, and medicine to build accessible point-of-care diagnostic devices. I focus on single-molecule nanopore sensing coupled with isothermal amplification (RPA, LAMP, CRISPR) and machine-learning-driven signal analysis for the rapid detection of infectious and neurodegenerative diseases.</p>
     <p>My work spans the full development pipeline, from assay chemistry and microfluidic chip fabrication to embedded readout electronics and edge-computing integration. I have translated benchtop nucleic-acid assays into portable, sample-to-answer platforms targeting SARS-CoV-2, HIV, Mpox, and Alzheimer disease. I also helped establish and operationalize the Guan Lab at Indiana University, where I currently serve as a Visiting Scholar.</p>
-
     <div class="mission">
       <strong>Focus:</strong> Democratizing accessible, affordable, and accurate diagnosis through single-molecule sensing, microfluidics, and intelligent data analytics.
     </div>
@@ -257,7 +276,7 @@ footer a{color:#9ed4e6}
       <li>6+ years of teaching and mentoring experience across undergraduate, M.S., and junior Ph.D. students.</li>
       <li>Research featured by AAAS/EurekAlert!, Medical Xpress, Newswise, and BioTechniques.</li>
     </ul>
-    <p style="margin-top:22px"><a class="btn" href="publications.html">View publications</a> &nbsp; <a class="btn ghost" href="Md_Ahasan_Ahamed_CV.pdf" target="_blank">Download CV (PDF)</a></p>
+    <p style="margin-top:22px"><a class="btn" href="publications.html">View publications</a> &nbsp; <a class="btn ghost" href="research.html">Explore research</a></p>
   </section>
 
 </div>
