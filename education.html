@@ -7,7 +7,160 @@
 <meta name="description" content="Academic background and degrees of Md. Ahasan Ahamed.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<style>
+/* ===========================================================
+   Md. Ahasan Ahamed — Academic Website — shared stylesheet
+   =========================================================== */
+:root{
+  --navy:#12233b; --accent:#0b6e8f; --accent-2:#12a1c9;
+  --ink:#1f2933; --muted:#5b6b7b; --line:#e3e8ee;
+  --bg:#ffffff; --bg-soft:#f6f8fb; --chip:#eaf4f8;
+  --maxw:980px; --radius:10px; --shadow:0 2px 14px rgba(18,35,59,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* Navbar */
+.navbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 22px;display:flex;
+  align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:700;color:var(--navy);font-size:1.05rem;letter-spacing:.2px}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;flex-wrap:wrap;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{display:inline-block;padding:7px 12px;border-radius:8px;color:var(--muted);font-weight:500;font-size:.94rem}
+.nav-links a:hover{background:var(--bg-soft);color:var(--navy);text-decoration:none}
+.nav-links a.active{color:var(--accent);background:var(--chip)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;
+  padding:6px 10px;font-size:1.1rem;cursor:pointer;color:var(--navy)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#0e2036 0%,#123a52 55%,#0b6e8f 100%);color:#fff;padding:64px 0 56px}
+.hero-inner{max-width:var(--maxw);margin:0 auto;padding:0 22px;display:grid;
+  grid-template-columns:150px 1fr;gap:34px;align-items:center}
+.avatar{width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.12);
+  border:3px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;
+  font-size:3rem;font-weight:700;color:#fff;overflow:hidden}
+.hero h1{margin:0 0 6px;font-size:2.15rem;letter-spacing:-.5px}
+.hero .tagline{margin:0 0 14px;color:#cfe6ef;font-weight:500;font-size:1.02rem}
+.hero .loc{color:#b7cede;font-size:.95rem;margin:0 0 16px}
+.hero-links{display:flex;flex-wrap:wrap;gap:10px}
+.hero-links a{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  color:#fff;padding:7px 14px;border-radius:20px;font-size:.88rem;font-weight:500}
+.hero-links a:hover{background:rgba(255,255,255,.24);text-decoration:none}
+
+/* Sections */
+main{padding:48px 0 60px}
+section{margin-bottom:46px}
+.page-title{font-size:1.9rem;color:var(--navy);margin:0 0 6px;letter-spacing:-.4px}
+.page-sub{color:var(--muted);margin:0 0 30px}
+h2.section-title{font-size:1.4rem;color:var(--navy);margin:0 0 18px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+h3{color:var(--navy);font-size:1.12rem;margin:26px 0 10px}
+p{margin:0 0 14px}
+.lead{font-size:1.08rem;color:var(--ink)}
+.mission{background:var(--bg-soft);border-left:4px solid var(--accent);padding:16px 20px;
+  border-radius:8px;margin:22px 0;color:var(--navy)}
+.mission strong{color:var(--accent)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:28px 0}
+.stat{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 14px;text-align:center}
+.stat .num{font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1.1}
+.stat .lbl{font-size:.85rem;color:var(--muted);margin-top:4px}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.chip{background:var(--chip);color:var(--accent);border-radius:16px;padding:4px 12px;font-size:.82rem;font-weight:500}
+
+/* Timeline */
+.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
+.tl-item{position:relative;margin-bottom:26px}
+.tl-item::before{content:"";position:absolute;left:-31px;top:5px;width:12px;height:12px;
+  background:var(--accent);border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--accent)}
+.tl-item .when{font-size:.85rem;color:var(--accent);font-weight:600}
+.tl-item h3{margin:2px 0 2px}
+.tl-item .where{color:var(--muted);font-size:.95rem;margin-bottom:6px}
+.tl-item ul{margin:6px 0 0;padding-left:18px}
+.tl-item li{margin-bottom:4px}
+
+/* Publications */
+.pub-group{margin-bottom:34px}
+.pub-list{list-style:none;margin:0;padding:0}
+.pub{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.pub .idx{flex:0 0 30px;font-weight:700;color:var(--accent);font-size:.95rem}
+.pub .body{flex:1}
+.pub .authors{color:var(--muted);font-size:.94rem}
+.pub .authors .me{color:var(--navy);font-weight:700}
+.pub .venue{font-style:italic;color:var(--navy)}
+.pub .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.badge{font-size:.74rem;font-weight:600;padding:2px 9px;border-radius:12px;text-transform:uppercase;letter-spacing:.4px}
+.badge.date{background:var(--chip);color:var(--accent)}
+.badge.review{background:#fff4e5;color:#b5651d}
+.badge.doi{background:#eef2f7;color:var(--muted)}
+.badge.doi a{color:var(--muted)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.info-row{display:flex;gap:10px;margin-bottom:12px}
+.info-row .k{font-weight:600;color:var(--navy);min-width:84px}
+.ref-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:14px}
+.ref-card .name{font-weight:700;color:var(--navy)}
+.ref-card .role{color:var(--muted);font-size:.92rem}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 20px;border-radius:8px;font-weight:600;font-size:.95rem}
+.btn:hover{background:#095b76;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.btn.ghost:hover{background:var(--chip)}
+
+/* Footer */
+footer{background:var(--navy);color:#b7cede;padding:30px 0;font-size:.9rem}
+footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+footer a{color:#9ed4e6}
+
+/* Responsive */
+@media (max-width:760px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;width:100%;flex-direction:column;padding-top:10px}
+  .nav-links.open{display:flex}
+  .nav-inner{flex-wrap:wrap}
+  .hero-inner{grid-template-columns:1fr;text-align:center;justify-items:center;gap:20px}
+  .hero-links{justify-content:center}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+/* --- Revision additions --- */
+.scholar-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;background:var(--bg-soft);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 20px;margin:0 0 30px}
+.scholar-cta .txt{flex:1;min-width:220px;color:var(--navy)}
+.pub-year{font-size:1.05rem;color:var(--accent);font-weight:700;margin:26px 0 4px;
+  padding-bottom:4px;border-bottom:1px solid var(--line)}
+.proj{display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:start;margin-bottom:34px}
+.proj.rev{grid-template-columns:1fr 260px}
+.proj.rev .fig{order:2}
+.fig{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg-soft)}
+.fig img{display:block;width:100%;height:auto}
+.fig .cap{font-size:.78rem;color:var(--muted);padding:8px 10px;border-top:1px solid var(--line)}
+.fig-ph{display:flex;align-items:center;justify-content:center;text-align:center;min-height:170px;
+  color:var(--muted);font-size:.85rem;padding:16px;background:repeating-linear-gradient(45deg,#f2f6fa,#f2f6fa 10px,#eef3f8 10px,#eef3f8 20px)}
+.proj h3{margin-top:0}
+.course{margin:0 0 6px}
+.course-role{color:var(--muted);font-size:.9rem;margin:0 0 10px}
+hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
+@media (max-width:760px){.proj,.proj.rev{grid-template-columns:1fr}.proj.rev .fig{order:0}}
+
+</style>
 </head>
 <body>
 <nav class="navbar">
@@ -34,21 +187,21 @@
     <div class="tl-item">
       <div class="when">2022 &ndash; 2026</div>
       <h3>Ph.D. in Electrical Engineering</h3>
-      <div class="where">The Pennsylvania State University, University Park, PA</div>
+      <div class="where">The Pennsylvania State University, University Park, PA &middot; CGPA 3.72</div>
       <p style="margin:0 0 6px">Dissertation: <em>Integrating Recombinase Polymerase Amplification with Nanopore Sensing for Point-of-Care Detection of Infectious Diseases.</em></p>
       <p style="margin:0">Major: Optics, semiconductor device design, bio-electronics systems. Advisor: Weihua Guan, PhD.</p>
     </div>
     <div class="tl-item">
       <div class="when">2020 &ndash; 2022</div>
       <h3>M.S. in Mechanical and Production Engineering</h3>
-      <div class="where">Konkuk University, Seoul, South Korea</div>
+      <div class="where">Konkuk University, Seoul, South Korea &middot; CGPA 4.25 / 96.5%</div>
       <p style="margin:0 0 6px">Thesis: <em>Pre-programmed Microdroplet Generator to Control Wide-ranging Chemical Concentrations.</em></p>
       <p style="margin:0">Major: Advanced fluid dynamics, micro/nano-fluidics, advanced numerical analysis, robot kinematics. Advisor: Sung-Jin Kim, PhD.</p>
     </div>
     <div class="tl-item">
       <div class="when">2009 &ndash; 2014</div>
       <h3>B.Sc. in Mechanical Engineering</h3>
-      <div class="where">Bangladesh University of Engineering and Technology (BUET)</div>
+      <div class="where">Bangladesh University of Engineering and Technology (BUET) &middot; CGPA 3.67 / 77.4%</div>
       <p style="margin:0 0 6px">Thesis: <em>Electricity Generation from the Compression of Speed Breakers.</em></p>
       <p style="margin:0">Major: Thermal and fluid sciences, renewable energy, instrumentation and control systems. Advisor: Arif Hasan Mamun, PhD.</p>
     </div>
@@ -72,6 +225,14 @@
     <div>Bloomington, IN &middot; <a href="mailto:mja6561@psu.edu">mja6561@psu.edu</a></div>
   </div>
 </footer>
-<script src="nav.js"></script>
+<script>
+// mobile nav toggle
+document.addEventListener('DOMContentLoaded',function(){
+  var t=document.querySelector('.nav-toggle');
+  var l=document.querySelector('.nav-links');
+  if(t&&l){t.addEventListener('click',function(){l.classList.toggle('open');});}
+});
+
+</script>
 </body>
 </html>
