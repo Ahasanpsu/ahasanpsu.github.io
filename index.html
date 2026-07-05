@@ -8,179 +8,7 @@
 <meta name="author" content="Md. Ahasan Ahamed">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-/* ===========================================================
-   Md. Ahasan Ahamed — Academic Website — shared stylesheet
-   =========================================================== */
-:root{
-  --navy:#12233b; --accent:#0b6e8f; --accent-2:#12a1c9;
-  --ink:#1f2933; --muted:#5b6b7b; --line:#e3e8ee;
-  --bg:#ffffff; --bg-soft:#f6f8fb; --chip:#eaf4f8;
-  --maxw:980px; --radius:10px; --shadow:0 2px 14px rgba(18,35,59,.08);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-img{max-width:100%}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-
-/* Navbar */
-.navbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
-  backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
-.nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 22px;display:flex;
-  align-items:center;justify-content:space-between;gap:16px}
-.brand{font-weight:700;color:var(--navy);font-size:1.05rem;letter-spacing:.2px}
-.brand span{color:var(--accent)}
-.nav-links{display:flex;flex-wrap:wrap;gap:4px;list-style:none;margin:0;padding:0}
-.nav-links a{display:inline-block;padding:7px 12px;border-radius:8px;color:var(--muted);font-weight:500;font-size:.94rem}
-.nav-links a:hover{background:var(--bg-soft);color:var(--navy);text-decoration:none}
-.nav-links a.active{color:var(--accent);background:var(--chip)}
-.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;
-  padding:6px 10px;font-size:1.1rem;cursor:pointer;color:var(--navy)}
-
-/* Hero */
-.hero{background:linear-gradient(135deg,#0e2036 0%,#123a52 55%,#0b6e8f 100%);color:#fff;padding:64px 0 56px}
-.hero-inner{max-width:var(--maxw);margin:0 auto;padding:0 22px;display:grid;
-  grid-template-columns:150px 1fr;gap:34px;align-items:center}
-.avatar{width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.12);
-  border:3px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;
-  font-size:3rem;font-weight:700;color:#fff;overflow:hidden}
-.hero h1{margin:0 0 6px;font-size:2.15rem;letter-spacing:-.5px}
-.hero .tagline{margin:0 0 14px;color:#cfe6ef;font-weight:500;font-size:1.02rem}
-.hero .loc{color:#b7cede;font-size:.95rem;margin:0 0 16px}
-.hero-links{display:flex;flex-wrap:wrap;gap:10px}
-.hero-links a{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
-  color:#fff;padding:7px 14px;border-radius:20px;font-size:.88rem;font-weight:500}
-.hero-links a:hover{background:rgba(255,255,255,.24);text-decoration:none}
-
-/* Sections */
-main{padding:48px 0 60px}
-section{margin-bottom:46px}
-.page-title{font-size:1.9rem;color:var(--navy);margin:0 0 6px;letter-spacing:-.4px}
-.page-sub{color:var(--muted);margin:0 0 30px}
-h2.section-title{font-size:1.4rem;color:var(--navy);margin:0 0 18px;padding-bottom:8px;border-bottom:2px solid var(--line)}
-h3{color:var(--navy);font-size:1.12rem;margin:26px 0 10px}
-p{margin:0 0 14px}
-.lead{font-size:1.08rem;color:var(--ink)}
-.mission{background:var(--bg-soft);border-left:4px solid var(--accent);padding:16px 20px;
-  border-radius:8px;margin:22px 0;color:var(--navy)}
-.mission strong{color:var(--accent)}
-
-/* Stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:28px 0}
-.stat{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 14px;text-align:center}
-.stat .num{font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1.1}
-.stat .lbl{font-size:.85rem;color:var(--muted);margin-top:4px}
-
-/* Cards */
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
-.card h3{margin-top:0}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
-.chip{background:var(--chip);color:var(--accent);border-radius:16px;padding:4px 12px;font-size:.82rem;font-weight:500}
-
-/* Timeline */
-.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
-.tl-item{position:relative;margin-bottom:26px}
-.tl-item::before{content:"";position:absolute;left:-31px;top:5px;width:12px;height:12px;
-  background:var(--accent);border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--accent)}
-.tl-item .when{font-size:.85rem;color:var(--accent);font-weight:600}
-.tl-item h3{margin:2px 0 2px}
-.tl-item .where{color:var(--muted);font-size:.95rem;margin-bottom:6px}
-.tl-item ul{margin:6px 0 0;padding-left:18px}
-.tl-item li{margin-bottom:4px}
-
-/* Publications */
-.pub-group{margin-bottom:34px}
-.pub-list{list-style:none;margin:0;padding:0}
-.pub{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
-.pub .idx{flex:0 0 30px;font-weight:700;color:var(--accent);font-size:.95rem}
-.pub .body{flex:1}
-.pub .authors{color:var(--muted);font-size:.94rem}
-.pub .authors .me{color:var(--navy);font-weight:700}
-.pub .venue{font-style:italic;color:var(--navy)}
-.pub .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
-.badge{font-size:.74rem;font-weight:600;padding:2px 9px;border-radius:12px;text-transform:uppercase;letter-spacing:.4px}
-.badge.date{background:var(--chip);color:var(--accent)}
-.badge.review{background:#fff4e5;color:#b5651d}
-.badge.doi{background:#eef2f7;color:var(--muted)}
-.badge.doi a{color:var(--muted)}
-
-/* Contact */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.info-row{display:flex;gap:10px;margin-bottom:12px}
-.info-row .k{font-weight:600;color:var(--navy);min-width:84px}
-.ref-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:14px}
-.ref-card .name{font-weight:700;color:var(--navy)}
-.ref-card .role{color:var(--muted);font-size:.92rem}
-
-/* Buttons */
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 20px;border-radius:8px;font-weight:600;font-size:.95rem}
-.btn:hover{background:#095b76;text-decoration:none}
-.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-.btn.ghost:hover{background:var(--chip)}
-
-/* Footer */
-footer{background:var(--navy);color:#b7cede;padding:30px 0;font-size:.9rem}
-footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
-footer a{color:#9ed4e6}
-
-/* Responsive */
-@media (max-width:760px){
-  .nav-toggle{display:block}
-  .nav-links{display:none;width:100%;flex-direction:column;padding-top:10px}
-  .nav-links.open{display:flex}
-  .nav-inner{flex-wrap:wrap}
-  .hero-inner{grid-template-columns:1fr;text-align:center;justify-items:center;gap:20px}
-  .hero-links{justify-content:center}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .cards{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-}
-
-/* --- Revision additions --- */
-.scholar-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;background:var(--bg-soft);
-  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 20px;margin:0 0 30px}
-.scholar-cta .txt{flex:1;min-width:220px;color:var(--navy)}
-.pub-year{font-size:1.05rem;color:var(--accent);font-weight:700;margin:26px 0 4px;
-  padding-bottom:4px;border-bottom:1px solid var(--line)}
-.proj{display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:start;margin-bottom:34px}
-.proj.rev{grid-template-columns:1fr 260px}
-.proj.rev .fig{order:2}
-.fig{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg-soft)}
-.fig img{display:block;width:100%;height:auto}
-.fig .cap{font-size:.78rem;color:var(--muted);padding:8px 10px;border-top:1px solid var(--line)}
-.fig-ph{display:flex;align-items:center;justify-content:center;text-align:center;min-height:170px;
-  color:var(--muted);font-size:.85rem;padding:16px;background:repeating-linear-gradient(45deg,#f2f6fa,#f2f6fa 10px,#eef3f8 10px,#eef3f8 20px)}
-.proj h3{margin-top:0}
-.course{margin:0 0 6px}
-.course-role{color:var(--muted);font-size:.9rem;margin:0 0 10px}
-hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
-@media (max-width:760px){.proj,.proj.rev{grid-template-columns:1fr}.proj.rev .fig{order:0}}
-
-/* --- pub thumbnails --- */
-.pub-thumb{float:right;width:118px;height:auto;margin:2px 0 8px 16px;border:1px solid var(--line);border-radius:6px;background:#fff}
-@media (max-width:520px){.pub-thumb{float:none;display:block;width:100%;max-width:220px;margin:8px 0}}
-
-/* --- featured video --- */
-.video-feature{margin:0 0 10px}
-.video-feature video{width:100%;aspect-ratio:8/5;background:#000;border-radius:10px;border:1px solid var(--line);display:block}
-.video-feature .cap{font-size:.85rem;color:var(--muted);margin-top:8px;text-align:center}
-
-/* --- video poster link --- */
-.video-link{position:relative;display:block;width:100%;aspect-ratio:8/5;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
-.video-link img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9}
-.video-link .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:76px;height:76px;border-radius:50%;background:rgba(11,110,143,.92);display:flex;align-items:center;justify-content:center}
-.video-link .play::after{content:"";border-style:solid;border-width:16px 0 16px 26px;border-color:transparent transparent transparent #fff;margin-left:6px}
-.video-link:hover .play{background:rgba(9,91,118,.98)}
-.video-link .ov{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;color:#fff;font-size:.9rem;
-  background:linear-gradient(transparent,rgba(0,0,0,.7))}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav class="navbar">
@@ -203,7 +31,7 @@ hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
     <div class="avatar" id="avatar">MA</div>
     <div>
       <h1>Md. Ahasan Ahamed</h1>
-      <p class="tagline">Device Engineer &middot; Microfluidics &middot; Portable Biosensing Systems</p>
+      <p class="tagline">Micro/Nano Systems Engineer &middot; Biosensing &amp; Diagnostics &middot; Microfluidics</p>
       <p class="loc">Bloomington, Indiana, USA</p>
       <div class="hero-links">
         <a href="https://scholar.google.com/citations?user=elt2-ZsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
@@ -219,12 +47,20 @@ hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
 <main>
 <div class="container">
 
+  <section class="video-feature">
+    <a class="video-link" href="https://pubs.acs.org/doi/suppl/10.1021/acssensors.5c01275/suppl_file/se5c01275_si_002.mp4" target="_blank" rel="noopener" aria-label="Play demonstration video">
+      <img src="https://wguanlab.github.io/assets/img/publication_preview/ahamed_multiplexed_2025.jpeg" alt="Portable salivary miRNA point-of-care platform">
+      <span class="play"></span>
+      <span class="ov">Watch: portable salivary miRNA point-of-care platform (<em>ACS Sensors</em>, 2025)</span>
+    </a>
+  </section>
+
   <section>
     <h2 class="section-title">About</h2>
-    <p class="lead">I am a device engineer and Ph.D. candidate in Electrical Engineering at The Pennsylvania State University, advised by Prof. Weihua Guan. My work centers on building portable biomedical systems that connect microfluidic sample handling, assay chemistry, optical or electronic readout, embedded hardware, and data analysis into practical point-of-care diagnostic platforms.</p>
-    <p>I design and fabricate microfluidic devices, integrate them with sensing modules and compact instrumentation, and translate benchtop molecular assays into portable workflows for real samples. My projects span nanopore sensing, RPA/LAMP/CRISPR assays, fluorescence detection, sample preparation, system packaging, Python-based analysis, and hardware-software integration for applications in SARS-CoV-2, HIV, Mpox, and Alzheimer disease.</p>
+    <p class="lead">I am a Ph.D. candidate in Electrical Engineering at The Pennsylvania State University, advised by Prof. Weihua Guan. My research integrates engineering, biology, and medicine to build accessible point-of-care diagnostic devices. I focus on single-molecule nanopore sensing coupled with isothermal amplification (RPA, LAMP, CRISPR) and machine-learning-driven signal analysis for the rapid detection of infectious and neurodegenerative diseases.</p>
+    <p>My work spans the full development pipeline, from assay chemistry and microfluidic chip fabrication to embedded readout electronics and edge-computing integration. I have translated benchtop nucleic-acid assays into portable, sample-to-answer platforms targeting SARS-CoV-2, HIV, Mpox, and Alzheimer disease. I also helped establish and operationalize the Guan Lab at Indiana University, where I currently serve as a Visiting Scholar.</p>
     <div class="mission">
-      <strong>Focus:</strong> Engineering integrated, reliable, and field-ready diagnostic devices through microfluidic design, system integration, single-molecule sensing, and intelligent data analytics.
+      <strong>Focus:</strong> Democratizing accessible, affordable, and accurate diagnosis through single-molecule sensing, microfluidics, and intelligent data analytics.
     </div>
   </section>
 
@@ -238,8 +74,8 @@ hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
       </div>
       <div class="card">
         <h3>Point-of-Care Diagnostics</h3>
-        <p>Portable, sample-to-answer systems integrating bio assays, portable device workflows, sample preparation, and compact fluorescence or electronic readout.</p>
-        <div class="chips"><span class="chip">Bio assay</span><span class="chip">Portable device</span></div>
+        <p>Portable, sample-to-answer systems integrating isothermal amplification (RPA, LAMP), CRISPR-Cas assays, and compact fluorescence readout.</p>
+        <div class="chips"><span class="chip">RPA / LAMP</span><span class="chip">CRISPR-Cas12a</span></div>
       </div>
       <div class="card">
         <h3>Microfluidics &amp; Device Fabrication</h3>
@@ -266,15 +102,6 @@ hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
     <p style="margin-top:22px"><a class="btn" href="publications.html">View publications</a> &nbsp; <a class="btn ghost" href="research.html">Explore research</a></p>
   </section>
 
-  <section class="video-feature">
-    <h2 class="section-title">Device Demonstration</h2>
-    <a class="video-link" href="https://pubs.acs.org/doi/suppl/10.1021/acssensors.5c01275/suppl_file/se5c01275_si_002.mp4" target="_blank" rel="noopener" aria-label="Play demonstration video">
-      <img src="assets/home/device-video-poster.png" alt="Portable diagnostic device setup with centrifuge, RPA reagents, analyzer, and battery pack">
-      <span class="play"></span>
-      <span class="ov">Watch: portable salivary miRNA point-of-care platform (<em>ACS Sensors</em>, 2025)</span>
-    </a>
-  </section>
-
 </div>
 </main>
 
@@ -284,14 +111,6 @@ hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
     <div>Bloomington, IN &middot; <a href="mailto:mja6561@psu.edu">mja6561@psu.edu</a></div>
   </div>
 </footer>
-<script>
-// mobile nav toggle
-document.addEventListener('DOMContentLoaded',function(){
-  var t=document.querySelector('.nav-toggle');
-  var l=document.querySelector('.nav-links');
-  if(t&&l){t.addEventListener('click',function(){l.classList.toggle('open');});}
-});
-
-</script>
+<script src="nav.js"></script>
 </body>
 </html>
